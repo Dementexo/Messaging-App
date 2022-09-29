@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/MessagingApp/static/css/main.31d6cfe0.css",
-    "main.js": "/MessagingApp/static/js/main.0a7a5d8b.js",
+    "main.js": "/MessagingApp/static/js/main.28abb8fa.js",
     "index.html": "/MessagingApp/index.html",
-    "main.0a7a5d8b.js.map": "/MessagingApp/static/js/main.0a7a5d8b.js.map"
+    "main.28abb8fa.js.map": "/MessagingApp/static/js/main.28abb8fa.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.0a7a5d8b.js"
+    "static/js/main.28abb8fa.js"
   ]
 }
