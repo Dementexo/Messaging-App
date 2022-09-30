@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.3a3cfd9c.css","mappings":"AAAA,eAGI,qBAAsB,CADtB,WAAW,CADX,UAGJ,CACA,KAEI,qBAAsB,CADtB,SAEJ","sources":["index.css"],"sourcesContent":[".siteContainer{\r\n    width:100%;\r\n    height:99vh;\r\n    background-color: aqua;\r\n}\r\n.nav{\r\n    width:50%;\r\n    background-color: blue;\r\n}\r\n"],"names":[],"sourceRoot":""}
