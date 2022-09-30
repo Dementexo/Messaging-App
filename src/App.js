@@ -33,16 +33,18 @@ function App() {
   return (
   <div className='App'>
     <div className='siteContainer'>
-      <nav>navbar</nav>
+      <nav>MessageBox</nav>
       <div className='messageBox'>
-        msgbox
+        msgboxd
       </div>
       <div className='chatAndTools'>
-        chatandtools
+        <div className='chatBox'>
+          chatbox
+        </div>
       </div>
     </div>
   </div> 
-  )   
-};
+  );   
+}
 
 export default App;
