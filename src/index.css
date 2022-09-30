@@ -1,0 +1,9 @@
+.siteContainer{
+    width:100%;
+    height:99vh;
+    background-color: aqua;
+}
+.nav{
+    width:50%;
+    background-color: blue;
+}
