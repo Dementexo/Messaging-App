@@ -1,45 +1,21 @@
-import firebase from 'firebase/app';
-import 'firebase/database';
-
-const fbConfig = {
-  apiKey: "AIzaSyDIvLGepnxCfFDo1pYb56Q01piEadEmXvY",
-    authDomain: "messagingapp-ebf31.firebaseapp.com",
-    projectId: "messagingapp-ebf31",
-    storageBucket: "messagingapp-ebf31.appspot.com",
-    messagingSenderId: "91502291868",
-    appId: "1:91502291868:web:625e7aaa6e007d919cb659",
-    measurementId: "G-532507XQS7"
-};
-
-firebase.initializeApp(fbConfig);
-const dbRef = firebase.database().ref();
-const testRef = dbRef.child("Jan's Flower Shop");
-const data = {
-  NewCustomers: {
-    Person1: 'Ligma',
-    Person2: 'Sugma',
-    Person3: 'ratioed'
-  },
-  SeasonedCustomers: {
-    Person1: 'Bertha',
-    Person2: 'Duke Nukem',
-    Person3: 'Martha Stewart'
-  }
-}
-
-testRef.set(data);
+import msgUpdate from "./firebase.js";
+import { useState } from 'react';
 
 function App() {
+  const { clientMessage, updateMessage } = useState('');
   return (
   <div className='App'>
     <div className='siteContainer'>
-      <nav>MessageBox</nav>
-      <div className='messageBox'>
-        msgboxd
+      <nav>MessageWebApp</nav>
+      <div className='messageContainer'>
+        <div className='messageBox'>
+          msgbox
+        </div>
       </div>
       <div className='chatAndTools'>
-        <div className='chatBox'>
-          chatbox
+        <div className="chatBox">
+          <input className="chatInput" placeholder="Click enter to send" type={ 'text' } onChange={e => {updateMessage(e)}}></input>
+          <input className="enterButton" type={'button'} onClick={() => { msgUpdate(clientMessage)}}></input>
         </div>
       </div>
     </div>
