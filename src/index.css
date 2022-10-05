@@ -15,6 +15,13 @@
         width:40% !important;
         height:5% !important;
     } 
+    .dhButton{
+        height:30px !important;
+        width:30px !important;
+    }
+    .dhImg{
+        height:15px !important;
+    }
 }
 @media all and (max-width:960px){
     .siteContainer{
@@ -22,26 +29,33 @@
         height:99vh !important;
     }
     nav{
-        width:80% !important;
+        width:95% !important;
         height:5% !important;
     }
     .messageContainer{
-        width:80% !important;
+        width:95% !important;
         height:60% !important;
     }
     .chatAndTools{
-        width:80% !important;
+        width:95% !important;
         height:5% !important;
     } 
     .chatBox{
         padding:1% !important;
-        width:60% !important;
+        width:68% !important;
         margin-left:auto;
         margin-right:1%;
     }
     .enterButton{
         width:18px !important; 
         height:18px !important;
+    }
+    .dhButton{
+        height:4vw !important;
+        width:4vw !important;
+    }
+    .dhImg{
+        height:3vw !important;
     }
 }
 .siteContainer{
@@ -64,7 +78,9 @@ nav{
     border-left-style: solid;
     border-right-style: solid;
     border-color:rgb(29, 29, 29);
-    border-bottom-color:white;
+    border-bottom-color:rgb(35, 61, 92);
+    border-top-left-radius:20px;
+    border-top-right-radius:20px;
     color:white;
     font-size:1.5rem;
 }
@@ -74,7 +90,7 @@ nav{
     align-items:center;
     width:75%;
     height:60%;
-    background-color: rgb(55, 97, 151);
+    background-color: rgb(16, 36, 61);
     border-left-style: solid;
     border-right-style: solid;
     border-color:rgb(29, 29, 29);
@@ -83,10 +99,24 @@ nav{
     display:flex;
     justify-content:center;
     align-items:center;
-    width:98%;
+    flex-direction:column;
+    width:70%;
     height:96%;
-    background-color:rgb(238, 245, 255);
+    background-color: rgb(35, 61, 92);
     border-radius:20px;
+    margin-left:auto;
+    margin-right:1%;
+}
+.dashBoard{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:25%;
+    height:96%;
+    background-color: rgb(35, 61, 92);
+    border-radius:20px;
+    margin-left:auto;
+    margin-right:auto;
 }
 .chatAndTools{
     width:75%;
@@ -100,16 +130,26 @@ nav{
     border-left-style: solid;
     border-right-style: solid;
     border-color:rgb(29, 29, 29);
-    border-top-color:white;
+    border-top-color:rgb(35, 61, 92);
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:20px;
+    padding-top:1%;
+    padding-bottom:1%;
 }
 .chatBox{
-    display:flex;
+    display:flex;  
     background-color: azure;
-    width: 50%;
+    width: 69%;
     padding:0.5%;
     border-radius:10px;
     text-decoration:none;
     border:none;
+    margin-left:auto;
+    margin-right:1%;
+}
+.inputForm{
+    display:flex;
+    width:100%;
 }
 .chatInput{
     width:85%;
@@ -117,10 +157,26 @@ nav{
     border-style:none;
     outline:none;
 }
-.enterButton{
-    width:25px;
-    height:25px;
+.shortcutOptions{
+    width:25%;
     margin-left:auto;
-    margin-right:1%;
-    border-radius:100%;
+    margin-right:auto;
+}
+.deleteHistory{
+    display:flex;
+}
+.dhButton{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:3vw;
+    width:3vw;
+    border-radius:20px;
+    border-style:none;
+    background-color: rgb(255, 89, 89);
+}
+.dhImg{
+    margin-left:auto;
+    margin-right:auto;
+    height:2vw;
 }

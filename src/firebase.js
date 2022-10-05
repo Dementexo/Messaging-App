@@ -1,5 +1,5 @@
-import firebase from 'firebase/app';
-import 'firebase/database';
+import { initializeApp } from 'firebase/app';
+import { getDatabase } from 'firebase/database';
 
 const fbConfig = {
   apiKey: "AIzaSyDIvLGepnxCfFDo1pYb56Q01piEadEmXvY",
@@ -11,12 +11,5 @@ const fbConfig = {
     measurementId: "G-532507XQS7"
 };
 
-firebase.initializeApp(fbConfig);
-const dbRef = firebase.database().ref();
-const testRef = dbRef.child("Jan's Flower Shop");
-
-const msgUpdate = (e) => {
-  testRef.set(e);
-}
-
-export default msgUpdate;
+const appInit = initializeApp(fbConfig);
+export const db = getDatabase(appInit);
