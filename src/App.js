@@ -1,55 +1,63 @@
-import { db } from './firebase';
-import { uid } from 'uid';
-import { set, ref, remove } from 'firebase/database';
-import { useState } from 'react';
-import React from 'react';
+import React, { Component } from 'react';
+import uiUpdate from './UIUpdate';
 
-function App() {
-  const [currentMessage, updateMessage] = useState('');
-  const changeHandler = (e)=>{
-    updateMessage(e.target.value)
+class App extends Component {
+  constructor(){
+    super();
+
+    this.state = {
+      ReceivedMessage: {text: ''},
+      sentMessages: [],
+    };
   }
-  const dbPush = () => {
-    const uuid = uid();
-    set(ref(db, `/${uuid}`),{
-      receivedMessage: currentMessage,
-      UniqueIdentifier: uuid
+  handleChange = (e) => {
+    this.setState({
+      ReceivedMessage: {
+        text: e.target.value,
+      }
     });
-    updateMessage('');
-  }
-  const delHistory = () =>{
-    remove(ref(db));
-  }
-  return (
-  <div className='App'>
-    <div className='siteContainer'>
-      <nav>MessageWebApp</nav>
-      <div className='messageContainer'>
-        <div className='dashBoard'>
-          dashboard
-        </div>
-        <div className='messageBox'>
-          msgbox
-        </div>
-      </div>
-      <div className='chatAndTools'>
-        <div className='shortcutOptions'>
-          <div className='deleteHistory'>
-            <button className='dhButton' onClick={delHistory}>
-              <img className='dhImg'src={require("./Images/history.png")} alt='Delete all history'></img>
-            </button>
+  };
+  msgSubmission = (e) => {
+    e.preventDefault();
+    this.setState({
+      sentMessages: this.state.tasks.concat(this.state.ReceivedMessage),
+      ReceivedMessage: { text: '' },
+    });
+  };
+  render() {
+    const { ReceivedMessage, sentMessages } = this.state;
+
+    return(
+      <div className='App'>
+        <div className='siteContainer'>
+          <nav>MessageWebApp</nav>
+          <div className='messageContainer'>
+            <div className='dashBoard'>
+              dashboard
+            </div>
+            <div className='messageBox'>
+              <uiUpdate sentMessages = {sentMessages}/>
+            </div>
+          </div>
+          <div className='chatAndTools'>
+           <div className='shortcutOptions'>
+              <div className='deleteHistory'>
+                <button className='dhButton'>
+                  <img className='dhImg'src={require("./Images/history.png")} alt='Delete all history'></img>
+                </button>
+              </div>
+            </div>
+            <div className='chatBox'>
+              <form className='inputForm' onSubmit={this.msgSubmission}>
+                <input className='chatInput' placeholder="Click enter to send" type="text"value={ReceivedMessage.text} onChange={this.handleChange}></input>
+                <button className='enterButton' type='submit'>Send</button>
+              </form>
+            </div>
           </div>
         </div>
-        <div className='chatBox'>
-          <form className='inputForm'>
-            <input className='chatInput' placeholder="Click enter to send" type={'text'} onChange={changeHandler}></input>
-            <button className='enterButton'onClick={dbPush}>Send</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div> 
- );  
-} 
+      </div> 
+    );  
+  }
+}
 
 export default App;
