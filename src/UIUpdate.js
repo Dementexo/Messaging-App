@@ -1,15 +1,15 @@
 import React from "react";
 
-const uiUpdate = (props) => {
+const UiUpdate = (props) => {
     const { sentMessages } = props;
 
     return (
-        <ul>
-            {sentMessages.map((sentMessages) => {
-                return <li key={sentMessages.id}>{sentMessages.text}</li>;
+        <div className="generatedMessageBox">
+            {sentMessages.map((ReceivedMessage) => {
+                return <div className="generatedMessage">{ReceivedMessage.text}</div>;
             })}
-        </ul>
+        </div>
     );
 };
 
-export default uiUpdate;
+export default UiUpdate;

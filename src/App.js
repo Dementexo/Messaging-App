@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import uiUpdate from './UIUpdate';
+import UiUpdate from './UIUpdate';
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
 
     this.state = {
       ReceivedMessage: {text: ''},
       sentMessages: [],
     };
+    this.gmContainerRef = React.createRef();
   }
   handleChange = (e) => {
     this.setState({
@@ -20,7 +21,7 @@ class App extends Component {
   msgSubmission = (e) => {
     e.preventDefault();
     this.setState({
-      sentMessages: this.state.tasks.concat(this.state.ReceivedMessage),
+      sentMessages: this.state.sentMessages.concat(this.state.ReceivedMessage),
       ReceivedMessage: { text: '' },
     });
   };
@@ -36,7 +37,7 @@ class App extends Component {
               dashboard
             </div>
             <div className='messageBox'>
-              <uiUpdate sentMessages = {sentMessages}/>
+              <UiUpdate sentMessages = {sentMessages}/>
             </div>
           </div>
           <div className='chatAndTools'>
@@ -49,7 +50,7 @@ class App extends Component {
             </div>
             <div className='chatBox'>
               <form className='inputForm' onSubmit={this.msgSubmission}>
-                <input className='chatInput' placeholder="Click enter to send" type="text"value={ReceivedMessage.text} onChange={this.handleChange}></input>
+                <input className='chatInput' placeholder="Click enter to send" type="text" value={ReceivedMessage.text} onChange={this.handleChange}></input>
                 <button className='enterButton' type='submit'>Send</button>
               </form>
             </div>
