@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import UiUpdate from './UIUpdate';
+import "./firebase";
+import { db } from './firebase';
+import { uid } from 'uid';
 
 class App extends Component {
   constructor() {
@@ -10,6 +13,7 @@ class App extends Component {
       sentMessages: [],
     };
     this.gmContainerRef = React.createRef();
+    const uidGen = uid();
   }
   handleChange = (e) => {
     this.setState({
@@ -18,12 +22,15 @@ class App extends Component {
       }
     });
   };
-  msgSubmission = (e) => {
+  msgSubmission = async (e) => {
     e.preventDefault();
     this.setState({
       sentMessages: this.state.sentMessages.concat(this.state.ReceivedMessage),
       ReceivedMessage: { text: '' },
     });
+    db.collection("Messages").doc("MsgContainer").set({
+      testing: "testing"
+    }, { merge: true });
   };
   deleteHistory = () => {
     this.setState({
@@ -33,7 +40,7 @@ class App extends Component {
   };
   render() {
     const { ReceivedMessage, sentMessages } = this.state;
-    
+
     return(
       <div className='App'>
         <div className='siteContainer'>

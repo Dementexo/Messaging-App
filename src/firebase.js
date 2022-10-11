@@ -1,5 +1,6 @@
-import { initializeApp } from 'firebase/app';
-import { getDatabase } from 'firebase/database';
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
+
 const fbConfig = {
     apiKey: process.env.REACT_APP_A_KEY,
     authDomain: process.env.REACT_APP_AD_KEY,
@@ -10,5 +11,5 @@ const fbConfig = {
     measurementId: process.env.REACT_APP_M_ID
 };
 
-const appInit = initializeApp(fbConfig);
-export const db = getDatabase(appInit);
+firebase.initializeApp(fbConfig)
+export const db = firebase.firestore();

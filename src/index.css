@@ -1,4 +1,4 @@
-@media all and (min-width:1200px){
+@media all and (min-width:1400px){
     .siteContainer{
         width:100% !important;
         height:99vh !important;
@@ -157,7 +157,7 @@ nav{
     border-style:none;
     background-color:azure;
     margin-left:auto;
-    transition:all 0.5s ease-in-out;
+    transition:all 0.3s ease-in-out;
 }
 .enterButton:hover{
     background-color:rgb(197, 209, 209);
@@ -193,11 +193,15 @@ nav{
     border-radius:20px;
     border-style:none;
     background-color: rgb(255, 89, 89);
+    transition:all 0.3s ease-in-out;
 }
 .dhImg{
     margin-left:auto;
     margin-right:auto;
     height:2vw;
+}
+.dhButton:hover{
+    background-color: rgb(194, 68, 68);
 }
 .generatedMessageBox{
     display:flex;
