@@ -13,7 +13,6 @@ class App extends Component {
       sentMessages: [],
     };
     this.gmContainerRef = React.createRef();
-    const uidGen = uid();
   }
   handleChange = (e) => {
     this.setState({
@@ -28,8 +27,8 @@ class App extends Component {
       sentMessages: this.state.sentMessages.concat(this.state.ReceivedMessage),
       ReceivedMessage: { text: '' },
     });
-    db.collection("Messages").doc("MsgContainer").set({
-      testing: "testing"
+    db.collection("Messages").doc(uid()).set({
+      Content: this.state.ReceivedMessage.text
     }, { merge: true });
   };
   deleteHistory = () => {
