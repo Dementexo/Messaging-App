@@ -10,4 +10,7 @@ Images Icon (top left): https://www.flaticon.com/free-icon/image-gallery_3342137
 
 Send Icon (bottom right): https://www.flaticon.com/free-icon/send-message_3682321?term=send&page=1&position=1&page=1&position=1&related_id=3682321&origin=search
 (made by onlyhasbi)
+
+SignIn Icon (bottom right): https://www.flaticon.com/free-icon/user_2321232?term=login&page=1&position=3&page=1&position=3&related_id=2321232&origin=search
+(made by Sebastian Belalcazar)
 <------------------------------------------------------------------------------------------>

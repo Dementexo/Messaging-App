@@ -3,6 +3,7 @@ import UiUpdate from './UIUpdate';
 import "./firebase";
 import { db } from './firebase';
 import { uid } from 'uid';
+import {signInWithGoogle} from "./firebase";
 
 class App extends Component {
   constructor() {
@@ -57,6 +58,11 @@ class App extends Component {
               <div className='deleteHistory'>
                 <button className='dhButton' onClick={this.deleteHistory}>
                   <img className='dhImg'src={require("./Images/history.png")} alt='Delete all history'></img>
+                </button>
+              </div>
+              <div className='signIn'>
+                <button className='siButton' onClick={signInWithGoogle} >
+                  <img className='siImg' src={require("./Images/user.png")} alt='Sign In'></img>
                 </button>
               </div>
             </div>

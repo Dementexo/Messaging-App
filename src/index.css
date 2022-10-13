@@ -22,6 +22,13 @@
     .dhImg{
         height:15px !important;
     }
+    .siButton{
+        height:30px !important;
+        width:30px !important;
+    }
+    .siImg{
+        height:15px !important;
+    }
 }
 @media all and (max-width:960px){
     .siteContainer{
@@ -43,8 +50,8 @@
     .chatBox{
         padding:1% !important;
         width:68% !important;
-        margin-left:auto;
-        margin-right:1%;
+        margin-left:auto !important;
+        margin-right:1% !important;
     }
     .enterButton{
         width:18px !important; 
@@ -55,7 +62,14 @@
         width:4vw !important;
     }
     .dhImg{
-        height:3vw !important;
+        height:2.5vw !important;
+    }
+    .siButton{
+        height:4vw !important;
+        width:4vw !important;
+    }
+    .siImg{
+        height:2.5vw !important;
     }
 }
 .siteContainer{
@@ -140,6 +154,7 @@ nav{
     display:flex;  
     background-color: azure;
     width: 69%;
+    height:3vh;
     padding:0.5%;
     border-radius:10px;
     text-decoration:none;
@@ -151,20 +166,22 @@ nav{
     display:flex;
     justify-content:center;
     align-items:center;
-    height:3vw;
-    width:3vw;
+    max-height:3vh;
+    width:2vw;
     border-radius:5px;
     border-style:none;
     background-color:azure;
     margin-left:auto;
     transition:all 0.3s ease-in-out;
+    margin-top:auto;
+    margin-bottom:auto;
 }
 .enterButton:hover{
     background-color:rgb(197, 209, 209);
 }
 .sendImg{
     align-self:center;
-    height:1.5vw;
+    height:2vh;
 }
 .inputForm{
     display:flex;
@@ -177,6 +194,8 @@ nav{
     outline:none;
 }
 .shortcutOptions{
+    display:flex;
+    justify-content:space-between;
     width:25%;
     margin-left:auto;
     margin-right:auto;
@@ -191,9 +210,10 @@ nav{
     height:3vw;
     width:3vw;
     border-radius:20px;
-    border-style:none;
+    border-style:solid;
     background-color: rgb(255, 89, 89);
     transition:all 0.3s ease-in-out;
+    border-color:white;
 }
 .dhImg{
     margin-left:auto;
@@ -202,6 +222,29 @@ nav{
 }
 .dhButton:hover{
     background-color: rgb(194, 68, 68);
+}
+.signIn{
+    display:flex;
+}
+.siButton{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:3vw;
+    width:3vw;
+    border-radius:20px;
+    border-style:solid;
+    background-color: rgb(89, 211, 64);
+    transition:all 0.3s ease-in-out;
+    border-color:white;
+}
+.siImg{
+    margin-left:auto;
+    margin-right:auto;
+    height:2vw;
+}
+.siButton:hover{
+    background-color: rgb(67, 163, 47) ;
 }
 .generatedMessageBox{
     display:flex;
