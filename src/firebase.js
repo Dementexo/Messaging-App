@@ -1,6 +1,5 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
-import "firebase/compat/auth";
 
 export const fbConfig = {
     apiKey: process.env.REACT_APP_A_KEY,

@@ -13,8 +13,13 @@ export const UnUpdate = () => {
 
     useEffect(() => {
         firebase.auth().onAuthStateChanged((user) => {
-            setCurrUser(user.displayName);
-            console.log(currUser);
+            if(user) {
+                setCurrUser(user.displayName);
+                console.log(currUser);
+            }
+            else {
+                setCurrUser("Stranger");
+            }
         });
     });
 
