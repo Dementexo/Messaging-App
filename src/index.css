@@ -121,16 +121,48 @@ nav{
     margin-left:auto;
     margin-right:1%;
 }
-.dashBoard{
+.searchDashBoard{
     display:flex;
     justify-content:center;
     align-items:center;
     width:25%;
     height:96%;
     background-color: rgb(35, 61, 92);
-    border-radius:20px;
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
     margin-left:auto;
     margin-right:auto;
+}
+.searchContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    height: 98%;
+    width: 85%;
+}
+.searchBarContainer{
+    background-color: rgb(8, 160, 46);
+    border-radius:10px;
+    height:3.5%;
+}
+.searchInput{
+    width:80%;
+    height:100%;
+    border-style:none;
+    background-color: rgb(27, 47, 71);
+    outline:none;
+    color:white;
+    padding-left:4%;
+}
+.resultsContainer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: rgb(27, 47, 71);
+    height:90%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color:white;
 }
 .chatAndTools{
     width:75%;
@@ -172,6 +204,7 @@ nav{
     border-style:none;
     background-color:azure;
     margin-left:auto;
+    margin-right:1.5%;
     transition:all 0.3s ease-in-out;
     margin-top:auto;
     margin-bottom:auto;
@@ -211,9 +244,9 @@ nav{
     width:3vw;
     border-radius:20px;
     border-style:solid;
+    border-color:rgb(165, 56, 56);
     background-color: rgb(255, 89, 89);
     transition:all 0.3s ease-in-out;
-    border-color:white;
 }
 .dhImg{
     margin-left:auto;
@@ -236,7 +269,7 @@ nav{
     border-style:solid;
     background-color: rgb(89, 211, 64);
     transition:all 0.3s ease-in-out;
-    border-color:white;
+    border-color:rgb(60, 146, 43);
 }
 .siImg{
     margin-left:auto;
@@ -280,4 +313,7 @@ nav{
 }
 .generatedMessageBox::-webkit-scrollbar-thumb{
     background-color: rgb(27, 47, 71);
+}
+.nameHolder{
+    background-color: blueviolet;
 }

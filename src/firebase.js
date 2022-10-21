@@ -2,7 +2,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/auth";
 
-const fbConfig = {
+export const fbConfig = {
     apiKey: process.env.REACT_APP_A_KEY,
     authDomain: process.env.REACT_APP_AD_KEY,
     projectId: process.env.REACT_APP_P_ID,
@@ -15,6 +15,3 @@ const fbConfig = {
 firebase.initializeApp(fbConfig)
 
 export const db = firebase.firestore();
-
-const provider = new firebase.auth.GoogleAuthProvider();
-export const signInWithGoogle = () => firebase.auth().signInWithPopup(provider);

@@ -3,7 +3,8 @@ import UiUpdate from './UIUpdate';
 import "./firebase";
 import { db } from './firebase';
 import { uid } from 'uid';
-import {signInWithGoogle} from "./firebase";
+import { signInWithGoogle, UnUpdate } from "./Auth";
+
 
 class App extends Component {
   constructor() {
@@ -13,8 +14,10 @@ class App extends Component {
       ReceivedMessage: {text: ''},
       sentMessages: [],
     };
+    
     this.gmContainerRef = React.createRef();
   }
+  
   handleChange = (e) => {
     this.setState({
       ReceivedMessage: {
@@ -44,10 +47,19 @@ class App extends Component {
     return(
       <div className='App'>
         <div className='siteContainer'>
-          <nav>MessageWebApp</nav>
+          <nav>
+           <UnUpdate/>
+          </nav>
           <div className='messageContainer'>
-            <div className='dashBoard'>
-              dashboard
+            <div className='searchDashBoard'>
+              <div className='searchContainer'>
+                <div className='searchBarContainer'>
+                  <input type={'text'} className='searchInput'></input>
+                </div>
+                <div className='resultsContainer'>
+        
+                </div>
+              </div>
             </div>
             <div className='messageBox' ref={ this.gmContainerRef }>
               <UiUpdate sentMessages = {sentMessages}/>
