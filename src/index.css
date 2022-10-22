@@ -295,7 +295,7 @@ nav{
     display:flex;
     width:fit-content;
     color:white;
-    flex-direction: row-reverse;
+    flex-direction: column;
     margin-top:2%;
     margin-bottom:2%;
     margin-left:auto;
@@ -306,6 +306,11 @@ nav{
     padding:2%;
     text-align:center;
     transition:all 0.5s ease-in-out;
+}
+.msgBoxName{
+    font-size:0.8rem;
+    opacity:0.5;
+    margin-top:8%;
 }
 .generatedMessageBox::-webkit-scrollbar{
     background-color: rgb(35, 61, 92);

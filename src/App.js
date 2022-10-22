@@ -4,6 +4,8 @@ import "./firebase";
 import { db } from './firebase';
 import { uid } from 'uid';
 import { signInWithGoogle, UnUpdate } from "./Auth";
+import "firebase/compat/auth";
+import firebase from "firebase/compat/app";
 
 
 class App extends Component {
@@ -13,11 +15,15 @@ class App extends Component {
     this.state = {
       ReceivedMessage: {text: ''},
       sentMessages: [],
+      Username: ""
     };
+    
+    firebase.auth().onAuthStateChanged((user) => {
+      this.state.Username = user.displayName;
+    });
     
     this.gmContainerRef = React.createRef();
   }
-  
   handleChange = (e) => {
     this.setState({
       ReceivedMessage: {
@@ -32,7 +38,8 @@ class App extends Component {
       ReceivedMessage: { text: '' },
     });
     db.collection("Messages").doc(uid()).set({
-      Content: this.state.ReceivedMessage.text
+      Content: this.state.ReceivedMessage.text,
+      SentBy: this.state.Username
     }, { merge: true });
   };
   deleteHistory = () => {
@@ -62,7 +69,7 @@ class App extends Component {
               </div>
             </div>
             <div className='messageBox' ref={ this.gmContainerRef }>
-              <UiUpdate sentMessages = {sentMessages}/>
+              <UiUpdate sentMessages = {sentMessages} userName = {this.state.Username}/>
             </div>
           </div>
           <div className='chatAndTools'>
