@@ -53,6 +53,9 @@ class App extends Component {
 
     return(
       <div className='App'>
+        <div className='generalInfo'>
+          <img className='giImg' src={require("./Images/information.png")}></img>
+        </div>
         <div className='siteContainer'>
           <nav>
            <UnUpdate/>
@@ -64,7 +67,7 @@ class App extends Component {
                   <input type={'text'} className='searchInput'></input>
                 </div>
                 <div className='resultsContainer'>
-        
+                  In Development
                 </div>
               </div>
             </div>
@@ -94,6 +97,9 @@ class App extends Component {
               </form>
             </div>
           </div>
+          <div className='loginInfo'>
+            ~If not currently logged, click the green button~
+        </div>
         </div>
       </div> 
     );  

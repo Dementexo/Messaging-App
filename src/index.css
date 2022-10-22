@@ -72,6 +72,29 @@
         height:2.5vw !important;
     }
 }
+.generalInfo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: rgb(54, 54, 54, 0.2);
+    width:20px;
+    height:20px;
+    border-radius:28px;
+    transition:all 1s ease-in-out;
+    padding:1%;
+    margin-left:auto;
+    margin-right:auto;
+    padding:20px;
+}
+.generalInfo:hover{
+    display:flex;
+    width:40%;
+    background-color: rgb(54, 54, 54, 1);
+}
+.giImg{
+    transition:all 0.5s ease-in-out;
+    height:2.5vh;
+}
 .siteContainer{
     display:flex;
     flex-direction:column;
@@ -198,13 +221,11 @@ nav{
     display:flex;
     justify-content:center;
     align-items:center;
-    max-height:3vh;
-    width:2vw;
+    height:100%;
     border-radius:5px;
     border-style:none;
     background-color:azure;
     margin-left:auto;
-    margin-right:1.5%;
     transition:all 0.3s ease-in-out;
     margin-top:auto;
     margin-bottom:auto;
@@ -311,6 +332,13 @@ nav{
     font-size:0.8rem;
     opacity:0.5;
     margin-top:8%;
+}
+.loginInfo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top: 2%;
+    color:rgb(39, 39, 39);
 }
 .generatedMessageBox::-webkit-scrollbar{
     background-color: rgb(35, 61, 92);
