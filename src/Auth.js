@@ -40,11 +40,11 @@ export const AdminClear = () => {
             }
             else {  
                 console.log("Authentication Failed!")
-                unmountComponentAtNode();
+                unmountComponentAtNode(document.getElementsByClassName("App"));
             }
         });
     });
-    
+
     return(
         <div className="hiddenDelete">
             over here!
