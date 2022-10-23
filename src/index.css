@@ -341,9 +341,11 @@ nav{
     background-color: rgb(38, 65, 99);
     border-radius:8px;
     width:94%;
+    max-width: 400px;
     margin-left:auto;
     margin-right:auto;
     padding:2%;
+    word-wrap: break-word;
 }
 .msgBoxName{
     display:flex;
