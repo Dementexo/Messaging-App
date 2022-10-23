@@ -20,14 +20,14 @@
         width:30px !important;
     }
     .dhImg{
-        height:15px !important;
+        height:1.6vw !important;
     }
     .siButton{
         height:30px !important;
         width:30px !important;
     }
     .siImg{
-        height:15px !important;
+        height:1.6vw !important;
     }
 }
 @media all and (max-width:960px){
@@ -62,14 +62,14 @@
         width:4vw !important;
     }
     .dhImg{
-        height:2.5vw !important;
+        height:4vw !important;
     }
     .siButton{
         height:4vw !important;
         width:4vw !important;
     }
     .siImg{
-        height:2.5vw !important;
+        height:4vw !important;
     }
 }
 .hiddenDelete{
@@ -164,7 +164,7 @@ nav{
 }
 .searchContainer{
     display:flex;
-    flex-direction: column;
+    flex-direction:column;
     justify-content:space-around;
     height: 98%;
     width: 85%;
@@ -241,7 +241,7 @@ nav{
 }
 .sendImg{
     align-self:center;
-    height:2vh;
+    height:100%;
 }
 .inputForm{
     display:flex;
