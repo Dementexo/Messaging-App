@@ -47,9 +47,11 @@ export const AdminClear = () => {
         });
     });
 
-    return(
-        <div className="hiddenDelete">
-            over here!
-        </div>
-    )
+    if(authCheck == true){
+        return(
+            <div className="hiddenDelete">
+                over here!
+            </div>
+        )
+    }
 };
