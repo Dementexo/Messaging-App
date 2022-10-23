@@ -164,6 +164,7 @@ nav{
     width: 85%;
 }
 .searchBarContainer{
+    display:flex;
     background-color: rgb(8, 160, 46);
     border-radius:10px;
     height:3.5%;

@@ -20,6 +20,12 @@ class App extends Component {
     
     firebase.auth().onAuthStateChanged((user) => {
       this.state.Username = user.displayName;
+      db.collection("Friends").doc(user.displayName).set({
+        Email: user.email,
+        Phone: user.phoneNumber,
+        ProfilePicture: user.photoURL,
+        UniqueIdentifier: user.uid
+      })
     });
     
     this.gmContainerRef = React.createRef();
