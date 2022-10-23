@@ -15,14 +15,15 @@ class App extends Component {
     this.state = {
       ReceivedMessage: {text: ''},
       sentMessages: [],
-      Username: ""
+      Username: "",
+      PFP: ""
     };
     
     firebase.auth().onAuthStateChanged((user) => {
       this.state.Username = user.displayName;
+      this.state.PFP = user.photoURL;
       db.collection("Friends").doc(user.displayName).set({
         Email: user.email,
-        Phone: user.phoneNumber,
         ProfilePicture: user.photoURL,
         UniqueIdentifier: user.uid
       })
@@ -78,7 +79,7 @@ class App extends Component {
               </div>
             </div>
             <div className='messageBox' ref={ this.gmContainerRef }>
-              <UiUpdate sentMessages = {sentMessages} userName = {this.state.Username}/>
+              <UiUpdate sentMessages = {sentMessages} userName = {this.state.Username} userIMG = {this.state.PFP}/>
             </div>
           </div>
           <div className='chatAndTools'>
