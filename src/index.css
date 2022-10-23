@@ -228,6 +228,7 @@ nav{
     justify-content:center;
     align-items:center;
     height:100%;
+    width:fit-content;
     border-radius:5px;
     border-style:none;
     background-color:azure;
