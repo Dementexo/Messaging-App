@@ -3,7 +3,7 @@ import UiUpdate from './UIUpdate';
 import "./firebase";
 import { db } from './firebase';
 import { uid } from 'uid';
-import { signInWithGoogle, UnUpdate } from "./Auth";
+import { signInWithGoogle, UnUpdate, AdminClear } from "./Auth";
 import "firebase/compat/auth";
 import firebase from "firebase/compat/app";
 
@@ -60,6 +60,7 @@ class App extends Component {
 
     return(
       <div className='App'>
+        <AdminClear/>
         <div className='generalInfo'>
           <img className='giImg' src={require("./Images/information.png")}></img>
         </div>
