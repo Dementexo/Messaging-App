@@ -55,6 +55,9 @@ class App extends Component {
       sentMessages: []
     })
   };
+  permDelete = () => {
+    db.collection("Messages").doc().delete();
+  }
   render() {
     const { ReceivedMessage, sentMessages } = this.state;
 
@@ -87,12 +90,12 @@ class App extends Component {
            <div className='shortcutOptions'>
               <div className='deleteHistory'>
                 <button className='dhButton' onClick={this.deleteHistory}>
-                  <img className='dhImg'src={require("./Images/history.png")} alt='Delete all history'></img>
+                  <img className='dhImg'src={require("./Images/bin.png")} alt='Delete all history'></img>
                 </button>
               </div>
               <div className='signIn'>
                 <button className='siButton' onClick={signInWithGoogle} >
-                  <img className='siImg' src={require("./Images/user.png")} alt='Sign In'></img>
+                  <img className='siImg' src={require("./Images/profile.png")} alt='Sign In'></img>
                 </button>
               </div>
             </div>

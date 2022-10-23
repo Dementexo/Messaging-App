@@ -2,7 +2,7 @@ import "firebase/compat/auth";
 import firebase from "firebase/compat/app";
 import { useEffect, useState } from "react";
 import React from "react";
-import { unmountComponentAtNode } from "react-dom";
+import { db } from './firebase';
 
 export const signInWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
@@ -34,6 +34,14 @@ export const UnUpdate = () => {
 export const AdminClear = () => {
     const [authCheck, setAuthCheck] = useState();
 
+    const permDelete = () => {
+        db.collection("Messages").get().then(querySnapshot => {
+            querySnapshot.docs.forEach(snapshot => {
+                snapshot.ref.delete();
+            })
+        })
+      }
+
     useEffect(() => {
         firebase.auth().onAuthStateChanged((user) => {
             if (user.uid == "buTtOeXKF5Rx4BNZQ1FeKrvhfUC3") {
@@ -49,8 +57,8 @@ export const AdminClear = () => {
 
     if(authCheck == true){
         return(
-            <div className="hiddenDelete">
-                over here!
+            <div className="hiddenDelete" onClick={permDelete}>
+                <img className="adminDeleteIcon" src={require("./Images/delete.png")}></img>
             </div>
         )
     };

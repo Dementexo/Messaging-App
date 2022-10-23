@@ -72,6 +72,12 @@
         height:2.5vw !important;
     }
 }
+.hiddenDelete{
+    width:fit-content;
+}
+.adminDeleteIcon{
+    height:2.5vh;
+}
 .generalInfo{
     display:flex;
     justify-content:center;
@@ -165,13 +171,12 @@ nav{
 }
 .searchBarContainer{
     display:flex;
-    background-color: rgb(8, 160, 46);
+    background-color: rgb(32, 54, 82);
     border-radius:10px;
     height:3.5%;
 }
 .searchInput{
     width:80%;
-    height:100%;
     border-style:none;
     background-color: rgb(27, 47, 71);
     outline:none;
@@ -264,19 +269,17 @@ nav{
     align-items:center;
     height:3vw;
     width:3vw;
-    border-radius:20px;
-    border-style:solid;
-    border-color:rgb(165, 56, 56);
-    background-color: rgb(255, 89, 89);
     transition:all 0.3s ease-in-out;
+    background-color: rgb(16, 36, 61);
+    border:none;
 }
 .dhImg{
     margin-left:auto;
     margin-right:auto;
-    height:2vw;
+    height:3vw;
 }
 .dhButton:hover{
-    background-color: rgb(194, 68, 68);
+    transform:scale(1.2);
 }
 .signIn{
     display:flex;
@@ -287,19 +290,17 @@ nav{
     align-items:center;
     height:3vw;
     width:3vw;
-    border-radius:20px;
-    border-style:solid;
-    background-color: rgb(89, 211, 64);
+    border-style:none;
     transition:all 0.3s ease-in-out;
-    border-color:rgb(60, 146, 43);
+    background-color: rgb(16, 36, 61);
 }
 .siImg{
     margin-left:auto;
     margin-right:auto;
-    height:2vw;
+    height:3vw;
 }
 .siButton:hover{
-    background-color: rgb(67, 163, 47) ;
+    transform:scale(1.2);
 }
 .generatedMessageBox{
     display:flex;
