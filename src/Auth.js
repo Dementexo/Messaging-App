@@ -53,5 +53,5 @@ export const AdminClear = () => {
                 over here!
             </div>
         )
-    }
+    };
 };
