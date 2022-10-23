@@ -32,15 +32,17 @@ export const UnUpdate = () => {
 };
 
 export const AdminClear = () => {
+    const [authCheck, setAuthCheck] = useState();
 
     useEffect(() => {
         firebase.auth().onAuthStateChanged((user) => {
             if (user.uid == "buTtOeXKF5Rx4BNZQ1FeKrvhfUC3") {
-                console.log("Authentication successful!")
+                console.log("Authentication successful!");
+                setAuthCheck(true)
             }
             else {  
                 console.log("Authentication Failed!")
-                unmountComponentAtNode(document.getElementsByClassName("App"));
+                setAuthCheck(false);
             }
         });
     });
