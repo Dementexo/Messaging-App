@@ -102,6 +102,9 @@
 .githubLink{
     margin-right:1%;
 }
+.ghImg{
+    height:2.5vh;
+}
 .siteContainer{
     display:flex;
     flex-direction:column;
