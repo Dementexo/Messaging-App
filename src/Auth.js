@@ -37,10 +37,9 @@ export const AdminClear = () => {
     const permDelete = () => {
         db.collection("Messages").get().then(querySnapshot => {
             querySnapshot.docs.forEach(snapshot => {
-                if(snapshot.ref.id != "Anchor"){
-                    snapshot.ref.delete();
-                }
+                snapshot.ref.delete();
             })
+            db.collection("Messages").doc("Anchor").set({});
         })
       }
 
