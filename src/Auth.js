@@ -44,7 +44,7 @@ export const AdminClear = () => {
 
     useEffect(() => {
         firebase.auth().onAuthStateChanged((user) => {
-            if (user.uid === "buTtOeXKF5Rx4BNZQ1FeKrvhfUC3") {
+            if (user.uid === "buTtOeXKF5Rx4BNZQ1FeKrvhfUC3" || user.uid === "FhT41FpMc9NplSsG8nLuGqYLkSd2") {
                 console.log("Authentication successful!");
                 setAuthCheck(true)
             }
