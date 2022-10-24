@@ -44,7 +44,7 @@ export const AdminClear = () => {
 
     useEffect(() => {
         firebase.auth().onAuthStateChanged((user) => {
-            if (user.uid == "buTtOeXKF5Rx4BNZQ1FeKrvhfUC3") {
+            if (user.uid === "buTtOeXKF5Rx4BNZQ1FeKrvhfUC3") {
                 console.log("Authentication successful!");
                 setAuthCheck(true)
             }
@@ -55,11 +55,18 @@ export const AdminClear = () => {
         });
     });
 
-    if(authCheck == true){
+    if(authCheck === true){
         return(
             <div className="hiddenDelete" onClick={permDelete}>
-                <img className="adminDeleteIcon" src={require("./Images/delete.png")}></img>
+                <img className="adminDeleteIcon" src={require("./Images/delete.png")} alt='Delete'></img>
             </div>
         )
-    };
+    }
+    else {
+        return(
+            <div className="hiddenDelete">
+                <img className="adminDeleteIcon" src={require("./Images/info.png")} alt='Info'></img>
+            </div>
+        )
+    }
 };

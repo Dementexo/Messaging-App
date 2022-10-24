@@ -63,9 +63,15 @@ class App extends Component {
 
     return(
       <div className='App'>
-        <AdminClear/>
-        <div className='generalInfo'>
-          <img className='giImg' src={require("./Images/information.png")}></img>
+        <div className='siteHeader'>
+          <AdminClear/>
+          <div className='headerTitle'>
+            Created by Donathan Brown using
+            <a className='firebaseLink' href='https://firebase.google.com/'> Firebase</a>
+          </div>
+          <a className='githubLink' href='https://github.com/Dementexo/Messaging-App'>
+            <img className='ghImg' src={require("./Images/GitHub-Mark-Light-32px.png")} alt='GitHub'></img>
+          </a>
         </div>
         <div className='siteContainer'>
           <nav>
