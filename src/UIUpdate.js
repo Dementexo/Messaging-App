@@ -13,7 +13,7 @@ const UiUpdate = (props) => {
                             </div>
                             <div className="msgBoxName">
                                 {userName}
-                                <img className='userIMG' src= {userIMG}></img>
+                                <img className='userIMG' src={userIMG}></img>
                             </div>
                         </div>
                     </div>
