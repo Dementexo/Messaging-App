@@ -6,6 +6,7 @@ import { uid } from 'uid';
 import { signInWithGoogle, UnUpdate, AdminClear } from "./Auth";
 import "firebase/compat/auth";
 import firebase from "firebase/compat/app";
+import { UserListGeneration } from "./social"
 
 
 class App extends Component {
@@ -84,7 +85,7 @@ class App extends Component {
                   <input type={'text'} className='searchInput'></input>
                 </div>
                 <div className='resultsContainer'>
-                  In Development
+                  <UserListGeneration/>
                 </div>
               </div>
             </div>

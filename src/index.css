@@ -83,6 +83,10 @@
 .hiddenDelete{
     margin-left:1%;
     width:fit-content;
+    transition:all 0.3s ease-in-out;
+}
+.hiddenDelete:hover{
+    transform: scale(1.2);
 }
 .adminDeleteIcon{
     height:2.5vh;
@@ -101,6 +105,10 @@
 }
 .githubLink{
     margin-right:1%;
+    transition:all 0.3s ease-in-out;
+}
+.githubLink:hover{
+    transform: scale(1.2);
 }
 .ghImg{
     height:2.5vh;
@@ -197,6 +205,28 @@ nav{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     color:white;
+}
+.generatedUserContainer{
+    display:flex;
+    flex-direction: column;
+    height:90%;
+    justify-content:center;
+    justify-content:space-around;
+    align-items: center;
+}
+.generatedUser{
+    display:flex;
+    width:fit-content;
+    text-align: center;
+    font-size:1rem;
+    background-color: rgb(45, 74, 112);
+    padding:8%;
+    border-radius:8px;
+}
+.guImg{
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left:2%;
 }
 .chatAndTools{
     width:75%;

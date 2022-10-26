@@ -16,7 +16,6 @@ export const UnUpdate = () => {
         firebase.auth().onAuthStateChanged((user) => {
             if(user) {
                 setCurrUser(user.displayName);
-                console.log(currUser);
             }
             else {
                 setCurrUser("Stranger");
