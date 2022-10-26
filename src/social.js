@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import React from "react";
 import { db } from './firebase';
 
-export const UserListGeneration = (props) => {
+export const UserListGeneration = () => {
 
     const [users, setUsers] = useState([]);
 
@@ -12,7 +12,6 @@ export const UserListGeneration = (props) => {
         db.collection('Friends').get().then((querySnapshot) => {
             const collection = [];
             querySnapshot.forEach((snapshot) => {
-                console.log(snapshot.id)
                 collection.push(snapshot.id);
             })
             setUsers(collection)
@@ -24,7 +23,7 @@ export const UserListGeneration = (props) => {
             {users.map((selectedUser) => {
                 return <div className="generatedUser">
                     {selectedUser}
-                    <img className="guImg" src={db.collection("Friends").doc(selectedUser).get("ProfilePicture")}></img>
+                    <img className="guImg" src={db.collection("Friends").doc(selectedUser).get().then((data) => {return data.get("ProfilePicture"), console.log(data.get("ProfilePicture"))})}></img>
                 </div>
             })}
         </div>
