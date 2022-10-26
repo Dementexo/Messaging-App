@@ -208,25 +208,40 @@ nav{
 }
 .generatedUserContainer{
     display:flex;
-    flex-direction: column;
     height:90%;
     justify-content:center;
     justify-content:space-around;
     align-items: center;
 }
+.userColumn{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    justify-content:space-around;
+    align-items:center;
+    height:100%;
+    padding-right:10%;
+}
+.photoColumn{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    justify-content:space-around;
+    align-items:center;
+    height:100%;
+}
 .generatedUser{
     display:flex;
     width:fit-content;
     text-align: center;
-    font-size:1rem;
+    font-size:0.8rem;
     background-color: rgb(45, 74, 112);
     padding:8%;
     border-radius:8px;
 }
 .guImg{
-    margin-top:auto;
-    margin-bottom:auto;
-    margin-left:2%;
+    height:2.5vh;
+    border-radius:12px;
 }
 .chatAndTools{
     width:75%;
