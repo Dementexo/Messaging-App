@@ -38,7 +38,7 @@ export const AdminClear = () => {
             querySnapshot.docs.forEach(snapshot => {
                 snapshot.ref.delete();
             })
-            db.collection("Messages").doc("Anchor").set({});
+            db.collection("Messages").doc("Anchor").set({Content: "History starts here!"});
         })
       }
 

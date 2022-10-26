@@ -26,6 +26,13 @@ export const UserListGeneration = () => {
 
     return(
         <div className="generatedUserContainer">
+            <div className="photoColumn">
+                {profileURL.map((selectedURL) => {
+                    return <div className="guImgHolder"> 
+                        <img className="guImg" src={selectedURL}></img>
+                    </div>
+                })}
+            </div>
             <div className="userColumn">
                 {users.map((selectedUser) => {
                     return <div className="generatedUser">
@@ -33,11 +40,36 @@ export const UserListGeneration = () => {
                     </div>
                 })}
             </div>
-            <div className="photoColumn">
-                {profileURL.map((selectedURL) => {
-                    return <img className="guImg" src={selectedURL}></img>
-                })}
-            </div>
+        </div>
+    )
+}
+
+export const HistGeneration = () => {
+    const [pastMessages, setPM] = useState([]);
+
+    useEffect(() => {
+        db.collection('Messages').get().then((querySnapshot) => {
+            const msgCollection = [];
+
+            querySnapshot.forEach((snapshot) => {
+                msgCollection.push(snapshot.get("Content"));
+            })
+            setPM(msgCollection);
+            console.log(msgCollection);
+        })
+    },[]);
+
+    return(
+        <div className="generatedHistoryBox">
+            {pastMessages.map((selectedMessage) => {
+                        return <div className="generatedHistMessage"> 
+                            <div className="hMsgContentHolder">
+                                <div className="hMsgContent">
+                                    {selectedMessage}
+                                </div>
+                            </div>
+                        </div>
+                 })}
         </div>
     )
 }

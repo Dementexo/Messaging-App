@@ -6,7 +6,7 @@ import { uid } from 'uid';
 import { signInWithGoogle, UnUpdate, AdminClear } from "./Auth";
 import "firebase/compat/auth";
 import firebase from "firebase/compat/app";
-import { UserListGeneration } from "./social"
+import { UserListGeneration, HistGeneration } from "./social"
 
 
 class App extends Component {
@@ -90,6 +90,7 @@ class App extends Component {
               </div>
             </div>
             <div className='messageBox' ref={ this.gmContainerRef }>
+              <HistGeneration/>
               <UiUpdate sentMessages = {sentMessages} userName = {this.state.Username} userIMG = {this.state.PFP}/>
             </div>
           </div>
