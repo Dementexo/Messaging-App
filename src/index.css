@@ -165,7 +165,7 @@ nav{
 }
 .generatedHistoryBox{
     display:flex;
-    flex-direction:column;
+    flex-direction:column-reverse;
     width: 90%;
     height:30%;
     margin-left:auto;
