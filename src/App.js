@@ -58,6 +58,9 @@ class App extends Component {
   };
   permDelete = () => {
     db.collection("Messages").doc().delete();
+  };
+  addAnchor = () => {
+    db.collection("Messages").doc("Anchor");
   }
   render() {
     const { ReceivedMessage, sentMessages } = this.state;
@@ -91,7 +94,12 @@ class App extends Component {
             </div>
             <div className='messageBox' ref={ this.gmContainerRef }>
               <HistGeneration/>
-              <UiUpdate sentMessages = {sentMessages} userName = {this.state.Username} userIMG = {this.state.PFP}/>
+              <div className="chatRoomTitle">
+                    Chatroom
+              </div>
+              <div className='generatedMessageHolder'>
+                <UiUpdate sentMessages = {sentMessages} userName = {this.state.Username} userIMG = {this.state.PFP}/>
+              </div>
             </div>
           </div>
           <div className='chatAndTools'>
