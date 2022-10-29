@@ -43,33 +43,3 @@ export const UserListGeneration = () => {
         </div>
     )
 }
-
-export const HistGeneration = () => {
-    const [pastMessages, setPM] = useState([]);
-
-    useEffect(() => {
-        db.collection('Messages').get().then((querySnapshot) => {
-            const msgCollection = [];
-
-            querySnapshot.forEach((snapshot) => {
-                msgCollection.push(snapshot.get("Content"));
-            })
-            setPM(msgCollection);
-            console.log(msgCollection);
-        })
-    },[]);
-
-    return(
-        <div className="generatedHistoryBox">
-            {pastMessages.map((selectedMessage) => {
-                        return <div className="generatedHistMessage"> 
-                            <div className="hMsgContentHolder">
-                                <div className="hMsgContent">
-                                    {selectedMessage}
-                                </div>
-                            </div>
-                        </div>
-                 })}
-        </div>
-    )
-}

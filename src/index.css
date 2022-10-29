@@ -163,61 +163,6 @@ nav{
     margin-left:auto;
     margin-right:1%;
 }
-.generatedHistoryBox{
-    display:flex;
-    flex-direction:column-reverse;
-    width: 90%;
-    height:30%;
-    margin-left:auto;
-    margin-right:3%;
-    margin-top:4%;
-    margin-bottom:2%;
-    overflow-y:scroll;
-    border-radius:8px;
-    border-style:solid;
-    border-color: rgb(67, 102, 148);
-    background-color: rgb(34, 56, 83);
-}
-.hMsgContentHolder{
-    display:inline-flex;
-    flex-direction:column;
-}
-.generatedHistMessage{
-    display:flex;
-    width:fit-content;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    color:white;
-    margin-top:2%;
-    margin-bottom:2%;
-    margin-left:auto;
-    margin-right:2%;
-    background-color:rgb(27, 47, 71);
-    border-radius:10px;
-    border-style:solid;
-    border-width:2px;
-    border-color: rgb(18, 34, 53);
-    font-size:0.9rem;
-    padding:2%;
-    text-align:center;
-    transition:all 0.5s ease-in-out;
-}
-.hMsgContent{
-    background-color: rgb(38, 65, 99);
-    border-radius:8px;
-    width:90%;
-    padding:5%;
-    word-wrap:normal;
-}
-.chatRoomTitle{
-    margin-left:auto;
-    margin-right:auto;
-    margin-bottom:auto;
-    padding-bottom:2%;
-    color:white;
-    position:initial;
-}
 .searchDashBoard{
     display:flex;
     justify-content:center;
@@ -427,11 +372,10 @@ nav{
 }
 .generatedMessageHolder{
     display:flex;
-    height:55%;
+    height:90%;
     width:90%;
     margin-left:auto;
-    margin-right:3%;
-    margin-bottom:2%;
+    margin-right:auto;
     border-radius:8px;
     border-style:solid;
     border-color: rgb(67, 102, 148);
@@ -485,7 +429,7 @@ nav{
     margin-left:auto;
     margin-right:auto;
     padding:2%;
-    word-wrap: break-word;
+    word-wrap: normal;
 }
 .msgBoxName{
     display:flex;

@@ -6,7 +6,7 @@ import { uid } from 'uid';
 import { signInWithGoogle, UnUpdate, AdminClear } from "./Auth";
 import "firebase/compat/auth";
 import firebase from "firebase/compat/app";
-import { UserListGeneration, HistGeneration } from "./social"
+import { UserListGeneration } from "./social"
 
 
 class App extends Component {
@@ -17,7 +17,8 @@ class App extends Component {
       ReceivedMessage: {text: ''},
       sentMessages: [],
       Username: "",
-      PFP: ""
+      PFP: "",
+      Timestamp: firebase.firestore.FieldValue.serverTimestamp()
     };
     
     firebase.auth().onAuthStateChanged((user) => {
@@ -43,11 +44,12 @@ class App extends Component {
     e.preventDefault();
     this.setState({
       sentMessages: this.state.sentMessages.concat(this.state.ReceivedMessage),
-      ReceivedMessage: { text: '' },
+      ReceivedMessage: { text: '' }
     });
     db.collection("Messages").doc(uid()).set({
       Content: this.state.ReceivedMessage.text,
-      SentBy: this.state.Username
+      SentBy: this.state.Username,
+      Timestamp: this.state.Timestamp
     }, { merge: true });
   };
   deleteHistory = () => {
@@ -93,10 +95,6 @@ class App extends Component {
               </div>
             </div>
             <div className='messageBox' ref={ this.gmContainerRef }>
-              <HistGeneration/>
-              <div className="chatRoomTitle">
-                    Chatroom
-              </div>
               <div className='generatedMessageHolder'>
                 <UiUpdate sentMessages = {sentMessages} userName = {this.state.Username} userIMG = {this.state.PFP}/>
               </div>
