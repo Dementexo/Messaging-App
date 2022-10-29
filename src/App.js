@@ -18,7 +18,8 @@ class App extends Component {
       sentMessages: [],
       Username: "",
       PFP: "",
-      Timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      Timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      Trigger: false
     };
     
     firebase.auth().onAuthStateChanged((user) => {
@@ -29,6 +30,7 @@ class App extends Component {
         ProfilePicture: user.photoURL,
         UniqueIdentifier: user.uid
       })
+      this.setState({Trigger: true})
     });
     
     this.gmContainerRef = React.createRef();

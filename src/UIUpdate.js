@@ -1,5 +1,4 @@
 import React from "react";
-import { HistGeneration } from "./social";
 import { useState, useEffect } from "react";
 import { db } from "./firebase";
 
