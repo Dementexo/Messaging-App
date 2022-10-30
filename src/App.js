@@ -16,10 +16,12 @@ class App extends Component {
     this.state = {
       ReceivedMessage: {text: ''},
       sentMessages: [],
+      globalSentMessages: db.collection("Messages"),
       Username: "",
       PFP: "",
       Timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-      Trigger: false
+      Trigger: false,
+      Trigger2: false
     };
     
     firebase.auth().onAuthStateChanged((user) => {
@@ -99,7 +101,7 @@ class App extends Component {
             </div>
             <div className='messageBox' ref={ this.gmContainerRef }>
               <div className='generatedMessageHolder'>
-                <UiUpdate sentMessages = {sentMessages} userName = {this.state.Username} userIMG = {this.state.PFP}/>
+                <UiUpdate trigger = {this.globalSentMessages}/>
               </div>
             </div>
           </div>

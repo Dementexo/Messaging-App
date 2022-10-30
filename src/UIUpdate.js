@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { db } from "./firebase";
 
 const UiUpdate = (props) => {
-    const { sentMessages, userName, userIMG} = props;
+    const { trigger } = props;
     const [pastMessages, setPM] = useState([]);
 
     useEffect(() => {
@@ -17,7 +17,7 @@ const UiUpdate = (props) => {
             console.log(msgCollection);
         })
 
-    },[sentMessages]);
+    },[trigger]);
 
     return (
         <div className="generatedMessageBox">
