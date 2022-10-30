@@ -48,9 +48,10 @@ class App extends Component {
       sentMessages: this.state.sentMessages.concat(this.state.ReceivedMessage),
       ReceivedMessage: { text: '' }
     });
-    db.collection("Messages").doc(uid()).set({
+    db.collection("Messages").doc(this.state.Username + "-" + uid()).set({
       Content: this.state.ReceivedMessage.text,
       SentBy: this.state.Username,
+      ProfilePic: this.state.PFP,
       Timestamp: this.state.Timestamp
     }, { merge: true });
   };

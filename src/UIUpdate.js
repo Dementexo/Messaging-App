@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { db } from "./firebase";
 
 const UiUpdate = (props) => {
-    const { sentMessages, userName, userIMG } = props;
+    const { sentMessages, userName, userIMG} = props;
     const [pastMessages, setPM] = useState([]);
 
     useEffect(() => {
@@ -11,11 +11,12 @@ const UiUpdate = (props) => {
             const msgCollection = [];
 
             querySnapshot.forEach((snapshot) => {
-                msgCollection.push(snapshot.get("Content"));
+                msgCollection.push({Content: snapshot.get("Content"), SentBy: snapshot.get("SentBy"), PFP: snapshot.get("ProfilePic")});
             })
             setPM(msgCollection);
             console.log(msgCollection);
         })
+
     },[sentMessages]);
 
     return (
@@ -24,11 +25,14 @@ const UiUpdate = (props) => {
                         return <div className="generatedMessage"> 
                             <div className="msgContentHolder">
                                 <div className="msgContent">
-                                    {selectedMessage}
+                                    {selectedMessage.Content}
                                 </div>
                                 <div className="msgBoxName">
-                                    {userName}
-                                    <img className='userIMG' src={userIMG}></img>
+                                    {selectedMessage.SentBy}
+                                    <img className='userIMG' src={selectedMessage.PFP}></img>
+                                </div>
+                                <div className="msgTS">
+                                    {selectedMessage.TS}
                                 </div>
                             </div>
                         </div>
