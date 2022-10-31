@@ -16,12 +16,11 @@ class App extends Component {
     this.state = {
       ReceivedMessage: {text: ''},
       sentMessages: [],
-      globalSentMessages: db.collection("Messages"),
       Username: "",
       PFP: "",
       Timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       Trigger: false,
-      Trigger2: false
+      Trigger2: []
     };
     
     firebase.auth().onAuthStateChanged((user) => {
@@ -35,6 +34,9 @@ class App extends Component {
       this.setState({Trigger: true})
     });
     
+    db.collection("Messages").onSnapshot((snapshot) => {
+      this.setState({Trigger2: snapshot});
+    })
     this.gmContainerRef = React.createRef();
   }
   handleChange = (e) => {
@@ -70,7 +72,7 @@ class App extends Component {
     db.collection("Messages").doc("Anchor");
   }
   render() {
-    const { ReceivedMessage, sentMessages } = this.state;
+    const { ReceivedMessage } = this.state;
 
     return(
       <div className='App'>
@@ -101,7 +103,7 @@ class App extends Component {
             </div>
             <div className='messageBox' ref={ this.gmContainerRef }>
               <div className='generatedMessageHolder'>
-                <UiUpdate trigger = {this.globalSentMessages}/>
+                <UiUpdate trigger = {this.state.Trigger2}/>
               </div>
             </div>
           </div>

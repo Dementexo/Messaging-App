@@ -16,7 +16,6 @@ const UiUpdate = (props) => {
             setPM(msgCollection);
             console.log(msgCollection);
         })
-
     },[trigger]);
 
     return (
@@ -30,9 +29,6 @@ const UiUpdate = (props) => {
                                 <div className="msgBoxName">
                                     {selectedMessage.SentBy}
                                     <img className='userIMG' src={selectedMessage.PFP}></img>
-                                </div>
-                                <div className="msgTS">
-                                    {selectedMessage.TS}
                                 </div>
                             </div>
                         </div>
