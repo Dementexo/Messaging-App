@@ -8,7 +8,6 @@ import "firebase/compat/auth";
 import firebase from "firebase/compat/app";
 import { UserListGeneration } from "./social"
 
-
 class App extends Component {
   constructor() {
     super();
@@ -20,7 +19,8 @@ class App extends Component {
       PFP: "",
       Timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       Trigger: false,
-      Trigger2: []
+      Trigger2: [],
+      Notif: {}
     };
     
     firebase.auth().onAuthStateChanged((user) => {
@@ -39,6 +39,7 @@ class App extends Component {
     })
     this.gmContainerRef = React.createRef();
   }
+  
   handleChange = (e) => {
     this.setState({
       ReceivedMessage: {
@@ -58,6 +59,7 @@ class App extends Component {
       ProfilePic: this.state.PFP,
       Timestamp: this.state.Timestamp
     }, { merge: true });
+    new Audio(require("./Audio/mixkit-gaming-lock-2848 (online-audio-converter.com).mp3")).play();
   };
   deleteHistory = () => {
     this.setState({
@@ -68,9 +70,7 @@ class App extends Component {
   permDelete = () => {
     db.collection("Messages").doc().delete();
   };
-  addAnchor = () => {
-    db.collection("Messages").doc("Anchor");
-  }
+
   render() {
     const { ReceivedMessage } = this.state;
 

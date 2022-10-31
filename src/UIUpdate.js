@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import App from "./App";
 import { db } from "./firebase";
 
 const UiUpdate = (props) => {
@@ -7,6 +8,7 @@ const UiUpdate = (props) => {
     const [pastMessages, setPM] = useState([]);
 
     useEffect(() => {
+
         db.collection('Messages').orderBy("Timestamp").get().then((querySnapshot) => {
             const msgCollection = [];
 
