@@ -34,7 +34,7 @@ class App extends Component {
       this.setState({Trigger: true})
     });
     
-   db.collection("Messages").onSnapshot({includeMetadataChanges: true}, (snapshot) => {
+   db.collection("Messages").onSnapshot((snapshot) => {
       this.setState({Trigger2: snapshot});
       console.log("Success!");
     })
