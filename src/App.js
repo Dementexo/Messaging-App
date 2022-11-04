@@ -6,7 +6,7 @@ import { uid } from 'uid';
 import { signInWithGoogle, UnUpdate, AdminClear } from "./Auth";
 import "firebase/compat/auth";
 import firebase from "firebase/compat/app";
-import { UserListGeneration } from "./social"
+import { UserListGeneration } from "./social";
 
 class App extends Component {
   constructor() {
@@ -34,8 +34,9 @@ class App extends Component {
       this.setState({Trigger: true})
     });
     
-    db.collection("Messages").onSnapshot((snapshot) => {
+   db.collection("Messages").onSnapshot({includeMetadataChanges: true}, (snapshot) => {
       this.setState({Trigger2: snapshot});
+      console.log("Success!");
     })
     this.gmContainerRef = React.createRef();
   }
@@ -59,7 +60,6 @@ class App extends Component {
       ProfilePic: this.state.PFP,
       Timestamp: this.state.Timestamp
     }, { merge: true });
-    new Audio(require("./Audio/mixkit-gaming-lock-2848 (online-audio-converter.com).mp3")).play();
   };
   deleteHistory = () => {
     this.setState({

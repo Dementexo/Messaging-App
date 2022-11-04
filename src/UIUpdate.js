@@ -1,14 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import App from "./App";
 import { db } from "./firebase";
 
 const UiUpdate = (props) => {
     const { trigger } = props;
     const [pastMessages, setPM] = useState([]);
-
     useEffect(() => {
-
         db.collection('Messages').orderBy("Timestamp").get().then((querySnapshot) => {
             const msgCollection = [];
 
@@ -16,9 +13,10 @@ const UiUpdate = (props) => {
                 msgCollection.push({Content: snapshot.get("Content"), SentBy: snapshot.get("SentBy"), PFP: snapshot.get("ProfilePic")});
             })
             setPM(msgCollection);
-            console.log(msgCollection);
         })
+        
     },[trigger]);
+    
 
     return (
         <div className="generatedMessageBox">
