@@ -34,10 +34,12 @@ class App extends Component {
       this.setState({Trigger: true})
     });
     
-   db.collection("Messages").onSnapshot((snapshot) => {
+   const unsub = () => db.collection("Messages").onSnapshot((snapshot) => {
       this.setState({Trigger2: snapshot});
       console.log("Success!");
+      new Audio(require("./Audio/mixkit-gaming-lock-2848 (online-audio-converter.com).mp3")).play();
     })
+    unsub();
     this.gmContainerRef = React.createRef();
   }
   

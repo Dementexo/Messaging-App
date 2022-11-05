@@ -9,10 +9,11 @@ const UiUpdate = (props) => {
         db.collection('Messages').orderBy("Timestamp").get().then((querySnapshot) => {
             const msgCollection = [];
 
-            querySnapshot.forEach((snapshot) => {
+            const unsub = () => querySnapshot.forEach((snapshot) => {
                 msgCollection.push({Content: snapshot.get("Content"), SentBy: snapshot.get("SentBy"), PFP: snapshot.get("ProfilePic")});
             })
             setPM(msgCollection);
+            unsub();
         })
         
     },[trigger]);
