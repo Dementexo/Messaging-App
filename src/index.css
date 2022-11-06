@@ -4,15 +4,15 @@
         height:94.5vh !important;
     }
     nav{
-        width:40% !important;
+        width:50% !important;
         height:5% !important;
     }
     .messageContainer{
-        width:40% !important;
+        width:50% !important;
         height:60% !important;
     }
     .chatAndTools{
-        width:40% !important;
+        width:50% !important;
         height:5% !important;
     } 
     .dhButton{
@@ -29,6 +29,9 @@
     .siImg{
         height:1.6vw !important;
     }
+    .containerBottom{
+        width:55% !important;
+    }
 }
 @media all and (max-width:960px){
     .siteContainer{
@@ -36,15 +39,15 @@
         height:94.5vh !important;
     }
     nav{
-        width:95% !important;
+        width:90% !important;
         height:5% !important;
     }
     .messageContainer{
-        width:95% !important;
-        height:60% !important;
+        width:90% !important;
+        height:50% !important;
     }
     .chatAndTools{
-        width:95% !important;
+        width:90% !important;
         height:5% !important;
     } 
     .chatBox{
@@ -71,13 +74,16 @@
     .siImg{
         height:4vw !important;
     }
+    .containerBottom{
+        width:98% !important;
+    }
 }
 .siteHeader{
     display:flex;
     justify-content:center;
     align-items:center;
     height:4vh;
-    background-color: rgb(15, 32, 53);
+    background-color: rgb(5, 11, 19);
     color:white;
 }
 .hiddenDelete{
@@ -120,7 +126,9 @@
     align-items:center;
     width:100%;
     height:94.5vh;
-    background-color: rgb(30, 60, 97);
+    background-image: url("./Images/1735.jpg");
+    background-size:cover;
+    background-position:center;
 }
 nav{
     display:flex;
@@ -128,28 +136,48 @@ nav{
     align-items:center;
     width:75%;
     height:5%;
+    margin-top:3%;
     background-color: rgb(16, 36, 61);
     border-top-style: solid;
-    border-bottom-style: solid;
     border-left-style: solid;
     border-right-style: solid;
-    border-color:rgb(29, 29, 29);
-    border-bottom-color:rgb(35, 61, 92);
+    border-left-width:12px;
+    border-right-width:12px;
+    border-top-width:40px;
+    border-left-color:rgb(3, 9, 17);
+    border-right-color:rgb(3, 9, 17);
+    border-top-color:rgb(3, 9, 17);
     border-top-left-radius:20px;
     border-top-right-radius:20px;
     color:white;
     font-size:1.5rem;
+    z-index:1;
+}
+.unHolder{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-bottom-style:solid;
+    border-bottom-color: rgb(41, 76, 119);
+    padding-bottom:0.8%;
+    margin-top:1%;
+    width:97%;
 }
 .messageContainer{
     display:flex;
     justify-content:center;
     align-items:center;
     width:75%;
-    height:60%;
+    height:45%;
     background-color: rgb(16, 36, 61);
     border-left-style: solid;
     border-right-style: solid;
-    border-color:rgb(29, 29, 29);
+    border-left-width:12px;
+    border-right-width:12px;
+    border-left-color:rgb(3, 9, 17);
+    border-right-color:rgb(3, 9, 17);
+    position:relative;
+    overflow:hidden;
 }
 .messageBox{
     display:flex;
@@ -162,7 +190,33 @@ nav{
     border-radius:20px;
     margin-left:auto;
     margin-right:1%;
+    position:relative;
+    overflow:hidden;
 }
+.messageBox::before{
+    content: '';
+    height:175vh;
+    width:250px;
+    position: absolute;
+    background: linear-gradient(#00ccff, #d500f9);
+    animation: rotate 4s linear infinite;
+}
+.messageBox::after{
+    content:'';
+    position:absolute;
+    background: rgb(16, 36, 61);
+    inset: 4px;
+    border-radius:16px;
+    z-index:0;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+ }
 .searchDashBoard{
     display:flex;
     justify-content:center;
@@ -240,8 +294,9 @@ nav{
 .generatedUser{
     display:flex;
     width:fit-content;
+    justify-content:center;
+    align-items:center;
     height:2.5vh;
-    text-align: center;
     font-size:0.8rem;
     background-color: rgb(45, 74, 112);
     padding:8%;
@@ -266,17 +321,18 @@ nav{
     justify-content:center;
     align-items: center;
     background-color: rgb(16, 36, 61);
-    box-shadow: 0px 10px 5px rgb(20, 43, 71);
-    border-top-style: solid;
     border-bottom-style: solid;
     border-left-style: solid;
     border-right-style: solid;
-    border-color:rgb(29, 29, 29);
-    border-top-color:rgb(35, 61, 92);
-    border-bottom-left-radius:20px;
-    border-bottom-right-radius:20px;
+    border-left-width:12px;
+    border-right-width:12px;
+    border-bottom-width:45px;
+    border-left-color:rgb(3, 9, 17);
+    border-right-color:rgb(3, 9, 17);
+    border-bottom-color:rgb(3, 9, 17);
     padding-top:1%;
     padding-bottom:1%;
+    z-index:1;
 }
 .chatBox{
     display:flex;  
@@ -380,6 +436,7 @@ nav{
     border-style:solid;
     border-color: rgb(67, 102, 148);
     background-color: rgb(34, 56, 83);
+    z-index:1;
 }
 .generatedMessageBox{
     display:flex;
@@ -453,12 +510,49 @@ nav{
     height:80%;
     border-radius:20px;
 }
-.loginInfo{
+.containerBottom{
     display:flex;
-    justify-content:center;
-    align-items:center;
-    margin-top: 2%;
-    color:rgb(214, 211, 211);
+    flex-direction: column;
+    width:85%;
+    height:5%;
+}
+.cbMain{
+    display:flex;
+    background-color: #cfcfcf;
+    flex:auto;
+    height:75%;
+    border-bottom-left-radius:12px;
+    border-bottom-right-radius:12px;
+    box-shadow: inset 0px -4px 6px 2px rgba(0,0,0,0.50);
+}
+.cbMiddle{
+    background-color: #cfcfcf;
+    height:55%;
+    width:15%;
+    border-bottom-left-radius:18px;
+    border-bottom-right-radius:18px;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow: inset 0px -4px 6px -3px rgba(0,0,0,0.50);
+}
+.cbBottom{
+    display:flex;
+    height:20%;
+}
+.peg1{
+    width:5%;
+    background-color: #1f1f1f;
+    margin-right:auto;
+    margin-left:3%;
+    border-bottom-left-radius:14px;
+    border-bottom-right-radius:14px;
+}
+.peg2{
+    width:5%;
+    background-color: #1f1f1f;
+    margin-right:3%;
+    border-bottom-left-radius:14px;
+    border-bottom-right-radius:14px;
 }
 .generatedMessageBox::-webkit-scrollbar{
     background-color: rgb(35, 61, 92);
@@ -476,4 +570,39 @@ nav{
 }
 .nameHolder{
     background-color: blueviolet;
+}
+.nmIndicatorHolder{
+    display:flex;
+    flex-direction:column;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+    align-items:center;
+    width:50%;
+}
+.nmImg{
+    width:50%;
+    animation: msgFloat 2s infinite;
+    transition: all ease-in-out;
+}
+@keyframes msgFloat {
+    0% {
+        transform: translateY(-4%);
+    }
+    50% {
+        transform: translateY(0%); 
+    }
+    100% {
+        transform: translateY(-4%);
+    }
+}
+.nmSubtext{
+    text-align:center;
+    color:rgb(214, 211, 211);
+    margin-top:6%;
+}
+.nmSubtext2{
+    text-align:center;
+    color:rgb(214, 211, 211);
+    margin-top:3%;
 }

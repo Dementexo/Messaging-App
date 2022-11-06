@@ -18,24 +18,36 @@ const UiUpdate = (props) => {
         
     },[trigger]);
     
-
-    return (
-        <div className="generatedMessageBox">
-            {pastMessages.map((selectedMessage) => {
-                        return <div className="generatedMessage"> 
-                            <div className="msgContentHolder">
-                                <div className="msgContent">
-                                    {selectedMessage.Content}
-                                </div>
-                                <div className="msgBoxName">
-                                    {selectedMessage.SentBy}
-                                    <img className='userIMG' src={selectedMessage.PFP}></img>
+    if (pastMessages == ""){
+        return <div className="nmIndicatorHolder">
+            <img className="nmImg" src={require("./Images/no-speak.png")}></img>
+            <div className="nmSubtext">
+                Currently no messages!
+            </div>
+            <div className="nmSubtext2">
+                No need to refresh, this will disappear once message is received or sent.
+            </div>
+        </div>
+    }
+    else{
+        return (
+            <div className="generatedMessageBox">
+                {pastMessages.map((selectedMessage) => {
+                            return <div className="generatedMessage"> 
+                                <div className="msgContentHolder">
+                                    <div className="msgContent">
+                                        {selectedMessage.Content}
+                                    </div>
+                                    <div className="msgBoxName">
+                                        {selectedMessage.SentBy}
+                                        <img className='userIMG' src={selectedMessage.PFP}></img>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                 })};
-        </div>
-    );
+                     })}
+            </div>
+        ); 
+    }
 };
 
 export default UiUpdate;

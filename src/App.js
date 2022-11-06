@@ -24,7 +24,6 @@ class App extends Component {
     };
     
     firebase.auth().onAuthStateChanged((user) => {
-      this.state.Username = user.displayName;
       this.state.PFP = user.photoURL;
       db.collection("Friends").doc(user.displayName).set({
         Email: user.email,
@@ -63,11 +62,8 @@ class App extends Component {
       Timestamp: this.state.Timestamp
     }, { merge: true });
   };
-  deleteHistory = () => {
-    this.setState({
-      ReceivedMessage: {text: ''}, 
-      sentMessages: []
-    })
+  deleteHistory = async () => {
+   
   };
   permDelete = () => {
     db.collection("Messages").doc().delete();
@@ -131,9 +127,16 @@ class App extends Component {
               </form>
             </div>
           </div>
-          <div className='loginInfo'>
-            ~If not currently logged, click the green button~
-        </div>
+          <div className='containerBottom'>
+            <div className='cbMain'>
+              <div className='cbMiddle'>
+              </div>
+            </div>
+            <div className='cbBottom'>
+                <div className='peg1'> </div>
+                <div className='peg2'> </div>
+            </div>
+          </div>
         </div>
       </div> 
     );  
