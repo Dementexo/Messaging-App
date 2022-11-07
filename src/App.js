@@ -62,9 +62,6 @@ class App extends Component {
       Timestamp: this.state.Timestamp
     }, { merge: true });
   };
-  deleteHistory = async () => {
-   
-  };
   permDelete = () => {
     db.collection("Messages").doc().delete();
   };
@@ -108,8 +105,8 @@ class App extends Component {
           <div className='chatAndTools'>
            <div className='shortcutOptions'>
               <div className='deleteHistory'>
-                <button className='dhButton' onClick={this.deleteHistory}>
-                  <img className='dhImg'src={require("./Images/bin.png")} alt='Delete all history'></img>
+                <button className='dhButton'>
+                  <img className='dhImg'src={require("./Images/photo.png")} alt='Delete all history'></img>
                 </button>
               </div>
               <div className='signIn'>
