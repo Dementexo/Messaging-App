@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UiUpdate from './UIUpdate';
+import { UiUpdate, ImgCredits }  from './UIUpdate';
 import "./firebase";
 import { db } from './firebase';
 import { uid } from 'uid';
@@ -20,10 +20,12 @@ class App extends Component {
       Timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       Trigger: false,
       Trigger2: [],
+      Trigger3: false,
       Notif: {}
     };
     
     firebase.auth().onAuthStateChanged((user) => {
+      this.state.Username = user.displayName;
       this.state.PFP = user.photoURL;
       db.collection("Friends").doc(user.displayName).set({
         Email: user.email,
@@ -65,6 +67,18 @@ class App extends Component {
   permDelete = () => {
     db.collection("Messages").doc().delete();
   };
+  displayCredits = () => {
+    if(this.state.Trigger3 === false){
+      this.setState({
+        Trigger3: true
+      })
+    }
+    else if (this.state.Trigger3 === true){
+      this.setState({
+        Trigger3: false
+      })
+    }
+  }
 
   render() {
     const { ReceivedMessage } = this.state;
@@ -82,6 +96,7 @@ class App extends Component {
           </a>
         </div>
         <div className='siteContainer'>
+        <ImgCredits trigger = {this.state.Trigger3}/>
           <nav>
            <UnUpdate/>
           </nav>
@@ -105,8 +120,8 @@ class App extends Component {
           <div className='chatAndTools'>
            <div className='shortcutOptions'>
               <div className='deleteHistory'>
-                <button className='dhButton'>
-                  <img className='dhImg'src={require("./Images/photo.png")} alt='Delete all history'></img>
+                <button className='dhButton' onClick={this.displayCredits}>
+                  <img className='dhImg'src={require("./Images/face.png")} alt='Delete all history'></img>
                 </button>
               </div>
               <div className='signIn'>
