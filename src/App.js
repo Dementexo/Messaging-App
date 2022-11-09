@@ -21,7 +21,7 @@ class App extends Component {
       Trigger: false,
       Trigger2: [],
       Trigger3: false,
-      Notif: {}
+      Notif: {},
     };
     
     firebase.auth().onAuthStateChanged((user) => {
@@ -43,7 +43,9 @@ class App extends Component {
     unsub();
     this.gmContainerRef = React.createRef();
   }
-  
+  /*This file was initally created to experiment with Class Components instead of Functional ones, thus
+  why the functions below remain here. Functional components are imported.*/
+
   handleChange = (e) => {
     this.setState({
       ReceivedMessage: {
@@ -74,8 +76,10 @@ class App extends Component {
       })
     }
     else if (this.state.Trigger3 === true){
+
       this.setState({
-        Trigger3: false
+        Trigger3: false,
+        
       })
     }
   }
@@ -95,17 +99,19 @@ class App extends Component {
             <img className='ghImg' src={require("./Images/GitHub-Mark-Light-32px.png")} alt='GitHub'></img>
           </a>
         </div>
+        <div className='photoCredHead'>
+          <div className='photoCredHolder'>
+            Don't forget to check out the artists behind these icons/photos!
+          </div>
+        </div>
         <div className='siteContainer'>
-        <ImgCredits trigger = {this.state.Trigger3}/>
           <nav>
            <UnUpdate/>
           </nav>
           <div className='messageContainer'>
+          <ImgCredits trigger = {this.state.Trigger3}/>
             <div className='searchDashBoard'>
               <div className='searchContainer'>
-                <div className='searchBarContainer'>
-                  <input type={'text'} className='searchInput'></input>
-                </div>
                 <div className='resultsContainer'>
                   <UserListGeneration/>
                 </div>
