@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Messaging-App/static/css/main.a1a3b8ec.css",
-    "main.js": "/Messaging-App/static/js/main.005d5726.js",
+    "main.css": "/Messaging-App/static/css/main.d2528872.css",
+    "main.js": "/Messaging-App/static/js/main.0b5ba674.js",
     "static/media/1735.jpg": "/Messaging-App/static/media/1735.e1bdae422cd03cbd1114.jpg",
     "static/media/profile.png": "/Messaging-App/static/media/profile.5faf09a7795d28bf5a2b.png",
     "static/media/no-speak.png": "/Messaging-App/static/media/no-speak.8e04e283b39a90aa87d9.png",
@@ -12,11 +12,11 @@
     "static/media/info.png": "/Messaging-App/static/media/info.0df83b68d7fad4332ca1.png",
     "static/media/delete.png": "/Messaging-App/static/media/delete.b5d68e25ab3f6cd47475.png",
     "index.html": "/Messaging-App/index.html",
-    "main.a1a3b8ec.css.map": "/Messaging-App/static/css/main.a1a3b8ec.css.map",
-    "main.005d5726.js.map": "/Messaging-App/static/js/main.005d5726.js.map"
+    "main.d2528872.css.map": "/Messaging-App/static/css/main.d2528872.css.map",
+    "main.0b5ba674.js.map": "/Messaging-App/static/js/main.0b5ba674.js.map"
   },
   "entrypoints": [
-    "static/css/main.a1a3b8ec.css",
-    "static/js/main.005d5726.js"
+    "static/css/main.d2528872.css",
+    "static/js/main.0b5ba674.js"
   ]
 }
