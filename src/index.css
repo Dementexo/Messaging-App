@@ -119,6 +119,25 @@
 .ghImg{
     height:2.5vh;
 }
+.photoCredHead{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    padding-top:3px;
+    padding-bottom:3px;
+    background: linear-gradient(240deg, hsla(298, 53%, 27%, 1) 19%, hsla(318, 67%, 54%, 1) 58%, hsla(32, 89%, 71%, 1) 97%);
+}
+.photoCredHolder{
+    font-size:1rem;
+    padding-top:0.3%;
+    padding-bottom:0.3%;
+    padding-left:1%;
+    padding-right:1%;
+    border-radius:12px;
+    color:white;
+    background-color: #34023d;
+}
 .siteContainer{
     display:flex;
     flex-direction:column;
@@ -129,6 +148,7 @@
     background-image: url("./Images/1735.jpg");
     background-size:cover;
     background-position:center;
+    overflow:visible;
 }
 nav{
     display:flex;
@@ -223,10 +243,13 @@ nav{
     width:25%;
     height:96%;
     background-color: rgb(35, 61, 92);
-    border-top-right-radius:20px;
-    border-bottom-right-radius:20px;
+    border-radius: 20px;
+    border-style:solid;
+    border-width: 3px;
+    border-color: #061931;
     margin-left:auto;
     margin-right:auto;
+    overflow:hidden;
 }
 .searchContainer{
     display:flex;
@@ -235,33 +258,22 @@ nav{
     height: 98%;
     width: 85%;
 }
-.searchBarContainer{
-    display:flex;
-    background-color: rgb(32, 54, 82);
-    border-radius:10px;
-    height:3.5%;
-}
-.searchInput{
-    width:80%;
-    border-style:none;
-    background-color: rgb(27, 47, 71);
-    outline:none;
-    color:white;
-    padding-left:4%;
-}
 .resultsContainer{
     display:flex;
     justify-content:center;
     align-items:center;
     background-color: rgb(27, 47, 71);
     height:90%;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius:20px;
+    border-color:rgba(37,188,255,0.4);
+    border-style:solid;
+    border-width:1px;
     color:white;
+    box-shadow: 0 0 35px -10px rgba(37,188,255,0.75);
 }
 .generatedUserContainer{
     display:flex;
-    height:90%;
+    height:95%;
     justify-content:center;
     justify-content:space-around;
     align-items: center;
@@ -440,7 +452,7 @@ nav{
 .generatedMessageBox{
     display:flex;
     flex-direction:column;
-    width: 90%;
+    min-width: 90%;
     max-height:95%;
     margin-top:auto;
     margin-left:auto;
@@ -606,7 +618,39 @@ nav{
     margin-top:3%;
 }
 .imgCredits{
-    display:flex;
+    display:flex; 
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    background-color: #0d1b1f;
+    color:rgb(226, 226, 226);
+    border-style:solid;
+    border-width:2px;
+    border-color:#0e3363;
+    position:absolute;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 150;
+    height:96%;
+    width:100%;
+    z-index: 9;
+    border-radius:12px;
+    animation: fadeIn 0.7s ease-in-out;
+    text-align:center;
+    padding-left:1%;
+    padding-right:1%;
+    font-size:1rem;
+}
+@keyframes fadeIn {
+    0% {
+        opacity:0;
+        transform: translateX(-55%);
+    }
+    100% {
+        opacity:1;
+    }
+}
+.imgCredits2{
+    display:flex; 
     flex-direction: column;
     justify-content:center;
     align-items:center;
@@ -618,19 +662,25 @@ nav{
     position:absolute;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 150;
-    height:35%;
-    width:40%;
+    height:96%;
+    width:100%;
     z-index: 9;
     border-radius:12px;
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeOut 0.7s ease-in-out;
+    text-align:center;
+    padding-top:1%;
+    padding-left:1%;
+    padding-right:1%;
+    font-size:1rem;  
+    opacity:0;
 }
-@keyframes fadeIn {
+@keyframes fadeOut {
     0% {
-        opacity:0;
-        transform: translateY(-55%);
+        opacity: 1;
     }
     100% {
-        opacity:1;
+        transform:translateX(45%);
+        opacity: 0;
     }
 }
 .icContentBox{
@@ -643,8 +693,9 @@ nav{
     border-width:1px;
     border-radius:12px;
     height:75%;
-    width:90%;
+    width:70%;
     margin-top:4%;
+    padding-bottom:4%;
 }
 .photoCreds{
     display:flex;
@@ -654,6 +705,8 @@ nav{
     color:white;
     margin-top:2%;
     margin-bottom:2%;
+    height:25%;
+    width:100%;
     box-shadow: 1px 8px 5px 0px rgba(0, 0, 0, 0.75);
     border-style:solid;
     border-width:1px;
@@ -664,18 +717,18 @@ nav{
     transform:scale(1.1);
 }
 .pcImg{
-    width:10%;
+    width:24px;
     margin-left:6%;
     margin-right:4%;
 }
 .ancHold{
     display:flex;
     justify-content:end;
-    width:50%;
+    width:fit-content;
     margin-left:auto;
+    margin-right:2%;
 }
 .linkImg{
-    width: 15%;
+    width: 24px;
     margin-left:auto;
-    margin-right:15%;
 }
