@@ -61,30 +61,29 @@ export const ImgCredits = (props) => {
     
     if (trigger === true){
         return <div className="imgCredits">
-        Be sure to check out these amazing photos!
         <div className="icContentBox">
-            <div className="photoCreds">
+            <div className="photoCreds" id="pc1">
                 <img className="pcImg" src={require("./Images/profile.png")}></img>
                 By Freepik
                 <a className="ancHold" href="https://www.flaticon.com/free-icon/profile_3135715?term=profile&page=1&position=2&page=1&position=2&related_id=3135715&origin=search">
                     <img className="linkImg" src={require("./Images/link.png")}></img>
                 </a>
             </div>
-            <div className="photoCreds">     
+            <div className="photoCreds" id="pc2">     
                 <img className="pcImg" src={require("./Images/face.png")}></img>
                 By surang
                 <a className="ancHold" href="https://www.flaticon.com/free-icon/face_5071156?term=photo&page=1&position=2&page=1&position=2&related_id=5071156&origin=search">
                     <img className="linkImg" src={require("./Images/link.png")}></img>
                 </a>
             </div>
-            <div className="photoCreds">
+            <div className="photoCreds" id="pc3">
                 <img className="pcImg" src={require("./Images/send-message.png")}></img>
                 By onlyhasbi
                 <a className="ancHold" href="https://www.flaticon.com/free-icon/send-message_3682321?term=send&page=1&position=1&page=1&position=1&related_id=3682321&origin=search">
                     <img className="linkImg" src={require("./Images/link.png")}></img>
                 </a>
             </div>
-            <div className="photoCreds">
+            <div className="photoCreds" id="pc4">
                 <img className="pcImg" src={require("./Images/info.png")}></img>
                 By Freepik
                 <a className="ancHold" href="https://www.flaticon.com/free-icon/info_4014943?term=info&page=1&position=18&page=1&position=18&related_id=4014943&origin=search">
@@ -97,7 +96,6 @@ export const ImgCredits = (props) => {
     //Temporary solution for animation fadeOut; won't want to keep this permanently as it may take up too many resources.
     else if (trigger === false){
         return <div className="imgCredits2">
-        Be sure to check out these amazing photos!
         <div className="icContentBox">
             <div className="photoCreds">
                 <img className="pcImg" src={require("./Images/profile.png")}></img>
