@@ -30,8 +30,18 @@ class App extends Component {
       db.collection("Friends").doc(user.displayName).set({
         Email: user.email,
         ProfilePicture: user.photoURL,
-        UniqueIdentifier: user.uid
+        UniqueIdentifier: user.uid,
       })
+      if (user.uid == "buTtOeXKF5Rx4BNZQ1FeKrvhfUC3"){
+        db.collection("Friends").doc(user.displayName).update({
+          isOwner: "Owner"
+        })
+      }
+      else {
+        db.collection("Friends").doc(user.displayName).set({
+          isOwner: "User"
+        })
+      }
       this.setState({Trigger: true})
     });
     

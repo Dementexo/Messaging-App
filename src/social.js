@@ -20,7 +20,7 @@ export const UserListGeneration = () => {
             querySnapshot.forEach((snapshot) => {
                 collection.push(snapshot.id);
                 collection2.push(snapshot.get("ProfilePicture"));
-                const data = {Name: snapshot.id, PFP: snapshot.get("ProfilePicture")};
+                const data = {Name: snapshot.id, PFP: snapshot.get("ProfilePicture"), UID: snapshot.get("UniqueIdentifier"), authCheck: snapshot.get("isOwner")};
                 collection3.push(data);
             })
             setUsers(collection);
@@ -48,10 +48,16 @@ export const UserListGeneration = () => {
                                 if(data.Name == selectedUser){
                                     return <div className="miniPF">
                                     <div className="mpfPFP">
-                                        <img src={data.PFP}></img>
+                                        <img className="mpfImg" src={data.PFP}></img>
                                     </div>
                                     <div className="mpfName">
                                         {data.Name}
+                                    </div>
+                                    <div className="mpfUID">
+                                        Unique Identifier: {data.UID}
+                                    </div>
+                                    <div className="mpfAuthCheck">
+                                        Status: {data.authCheck}
                                     </div>
                                 </div>
                                 }
