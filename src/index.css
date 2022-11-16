@@ -5,17 +5,17 @@
     }
     nav{
         min-width:800px !important;
-        max-width:1000px !important;
+        max-width:950px !important;
         height:5% !important;
     }
     .messageContainer{
         min-width:800px !important;
-        max-width:1000px !important;
+        max-width:950px !important;
         height:40% !important;
     }
     .chatAndTools{
         min-width:800px !important;
-        max-width:1000px !important;
+        max-width:950px !important;
         height:5% !important;
     } 
     .dhButton{
@@ -34,7 +34,7 @@
     }
     .containerBottom{
         min-width:900px !important;
-        max-width:1100px !important;
+        max-width:1050px !important;
     }
 }
 @media all and (max-width:960px){
@@ -159,6 +159,7 @@ nav{
     justify-content:center;
     align-items:center;
     width:75%;
+    max-width:800px;
     max-height:1500px;
     margin-top:3%;
     background-color: rgb(16, 36, 61);
@@ -191,7 +192,9 @@ nav{
     justify-content:center;
     align-items:center;
     width:75%;
+    max-width:800px;
     height:45%;
+    max-height:400px;
     background-color: rgb(16, 36, 61);
     border-left-style: solid;
     border-right-style: solid;
@@ -343,6 +346,13 @@ nav{
     opacity:0;
     transition:all 0.5s ease-in-out;
 }
+.holder:hover .miniPF{
+    display:none;
+    position:absolute;
+    width:0.01%;
+    height:0.01%;
+    top:100%;
+}
 .guImg{
     border-style:solid;
     border-width: 2px;
@@ -385,6 +395,7 @@ nav{
 }
 .chatAndTools{
     width:75%;
+    max-width:800px;
     display:flex;
     justify-content:center;
     align-items: center;
@@ -582,6 +593,7 @@ nav{
     display:flex;
     flex-direction: column;
     width:85%;
+    max-width:900px;
     height:5%;
 }
 .cbMain{
