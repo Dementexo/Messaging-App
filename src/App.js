@@ -38,7 +38,7 @@ class App extends Component {
         })
       }
       else {
-        db.collection("Friends").doc(user.displayName).set({
+        db.collection("Friends").doc(user.displayName).update({
           isOwner: "User"
         })
       }
