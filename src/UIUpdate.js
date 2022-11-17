@@ -90,6 +90,20 @@ export const ImgCredits = (props) => {
                     <img className="linkImg" src={require("./Images/link.png")}></img>
                 </a>
             </div>
+            <div className="photoCreds" id="pc5">
+                <img className="pcImg" src={require("./Images/no-speak.png")}></img>
+                By Freepik
+                <a className="ancHold" href="https://www.flaticon.com/free-icon/no-speak_5336607?term=no%20speak&page=1&position=2&page=1&position=2&related_id=5336607&origin=search">
+                    <img className="linkImg" src={require("./Images/link.png")}></img>
+                </a>
+            </div>
+            <div className="photoCreds" id="pc6">
+                <img className="pcImg" src={require("./Images/1735.jpg")}></img>
+                By vectorpouch
+                <a className="ancHold" href="https://www.freepik.com/free-vector/living-room-interior-with-panoramic-window-night-time_5467441.htm#query=living%20room%20interior%20with%20panoramic%20window&position=17&from_view=search&track=sph">
+                    <img className="linkImg" src={require("./Images/link.png")}></img>
+                </a>
+            </div>
         </div>
     </div>
     }
@@ -122,6 +136,20 @@ export const ImgCredits = (props) => {
                 <img className="pcImg" src={require("./Images/info.png")}></img>
                 By Freepik
                 <a className="ancHold" href="https://www.flaticon.com/free-icon/info_4014943?term=info&page=1&position=18&page=1&position=18&related_id=4014943&origin=search">
+                    <img className="linkImg" src={require("./Images/link.png")}></img>
+                </a>
+            </div>
+            <div className="photoCreds">
+                <img className="pcImg" src={require("./Images/no-speak.png")}></img>
+                By Freepik
+                <a className="ancHold" href="https://www.flaticon.com/free-icon/no-speak_5336607?term=no%20speak&page=1&position=2&page=1&position=2&related_id=5336607&origin=search">
+                    <img className="linkImg" src={require("./Images/link.png")}></img>
+                </a>
+            </div>
+            <div className="photoCreds">
+                <img className="pcImg" src={require("./Images/1735.jpg")}></img>
+                By vectorpouch
+                <a className="ancHold" href="https://www.freepik.com/free-vector/living-room-interior-with-panoramic-window-night-time_5467441.htm#query=living%20room%20interior%20with%20panoramic%20window&position=17&from_view=search&track=sph">
                     <img className="linkImg" src={require("./Images/link.png")}></img>
                 </a>
             </div>

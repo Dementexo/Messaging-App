@@ -358,6 +358,10 @@ nav{
     padding:8%;
     transition:all 0.5s ease-in-out;
 }
+.friendButton{
+    display:flex;
+    flex-direction:column;
+}   
 .mpfPFP{
     display:flex;
     justify-content:center;
@@ -837,6 +841,40 @@ nav{
     animation: pc4 3s ease-in-out;
 }
 @keyframes pc4 {
+    0% {
+        opacity: 0;
+        
+    }
+    50%{
+        transform:translateY(-600%);
+        opacity:0;
+    }
+    100% {
+        
+        opacity: 1;
+    }
+}
+#pc5{
+    animation: pc5 3.7s ease-in-out;
+}
+@keyframes pc5 {
+    0% {
+        opacity: 0;
+        
+    }
+    50%{
+        transform:translateY(-600%);
+        opacity:0;
+    }
+    100% {
+        
+        opacity: 1;
+    }
+}
+#pc6{
+    animation: pc6 4.4s ease-in-out;
+}
+@keyframes pc6 {
     0% {
         opacity: 0;
         
