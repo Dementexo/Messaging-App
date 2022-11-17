@@ -69,12 +69,22 @@ class App extends Component {
       sentMessages: this.state.sentMessages.concat(this.state.ReceivedMessage),
       ReceivedMessage: { text: '' }
     });
-    db.collection("Messages").doc(this.state.Username + "-" + uid()).set({
-      Content: this.state.ReceivedMessage.text,
-      SentBy: this.state.Username,
-      ProfilePic: this.state.PFP,
-      Timestamp: this.state.Timestamp
-    }, { merge: true });
+    if(this.state.Username != ""){
+      db.collection("Messages").doc(this.state.Username + "-" + uid()).set({
+        Content: this.state.ReceivedMessage.text,
+        SentBy: this.state.Username,
+        ProfilePic: this.state.PFP,
+        Timestamp: this.state.Timestamp
+      }, { merge: true });
+    }
+    else {
+      db.collection("Messages").doc(this.state.Username + "-" + uid()).set({
+        Content: this.state.ReceivedMessage.text,
+        SentBy: "Anonymous",
+        ProfilePic: "https://img.freepik.com/free-vector/mysterious-gangster-character_23-2148483453.jpg?w=740&t=st=1668722409~exp=1668723009~hmac=61a7b575bea733e8ece62e06514232419ac20ce7e7b9d5c8b4dcdba9937c3d45",
+        Timestamp: this.state.Timestamp
+      }, { merge: true });
+    }
   };
   permDelete = () => {
     db.collection("Messages").doc().delete();

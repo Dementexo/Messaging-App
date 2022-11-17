@@ -18,7 +18,7 @@ export const UnUpdate = () => {
                 setCurrUser(user.displayName);
             }
             else {
-                setCurrUser("Stranger");
+                setCurrUser("Please Sign In");
             }
         });
     });
