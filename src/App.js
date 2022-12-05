@@ -145,9 +145,9 @@ class App extends Component {
           </div>
           <div className='chatAndTools'>
            <div className='shortcutOptions'>
-              <div className='deleteHistory'>
-                <button className='dhButton' onClick={this.displayCredits}>
-                  <img className='dhImg'src={require("./Images/face.png")} alt='Delete all history'></img>
+              <div className='imageCred'>
+                <button className='icButton' onClick={this.displayCredits}>
+                  <img className='icImg'src={require("./Images/face.png")} alt='Delete all history'></img>
                 </button>
               </div>
               <div className='signIn'>

@@ -15,19 +15,19 @@
         max-width:900px !important;
         height:6% !important;
     } 
-    .dhButton{
+    .icButton{
         height:30px !important;
         width:30px !important;
     }
-    .dhImg{
-        height:1.6vw !important;
+    .icImg{
+        height:40px !important;
     }
     .siButton{
         height:30px !important;
         width:30px !important;
     }
     .siImg{
-        height:1.6vw !important;
+        height:40px !important;
     }
     .containerBottom{
         max-width:900px !important;
@@ -56,11 +56,11 @@
         margin-left:auto !important;
         margin-right:1% !important;
     }
-    .dhButton{
+    .icButton{
         height:4vw !important;
         width:4vw !important;
     }
-    .dhImg{
+    .icImg{
         height:4vw !important;
     }
     .siButton{
@@ -458,10 +458,10 @@ nav{
     margin-left:auto;
     margin-right:auto;
 }
-.deleteHistory{
+.imageCred{
     display:flex;
 }
-.dhButton{
+.icButton{
     display:flex;
     justify-content:center;
     align-items:center;
@@ -471,12 +471,12 @@ nav{
     background-color: rgb(16, 36, 61);
     border:none;
 }
-.dhImg{
+.icImg{
     margin-left:auto;
     margin-right:auto;
     height:3vw;
 }
-.dhButton:hover{
+.icButton:hover{
     transform:scale(1.2);
 }
 .signIn{
