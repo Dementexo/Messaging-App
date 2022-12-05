@@ -1,22 +1,21 @@
 {
   "files": {
-    "main.css": "/Messaging-App/static/css/main.b57ef755.css",
-    "main.js": "/Messaging-App/static/js/main.a38a0311.js",
+    "main.css": "/Messaging-App/static/css/main.23488570.css",
+    "main.js": "/Messaging-App/static/js/main.3556a905.js",
     "static/media/1735.jpg": "/Messaging-App/static/media/1735.e1bdae422cd03cbd1114.jpg",
     "static/media/profile.png": "/Messaging-App/static/media/profile.5faf09a7795d28bf5a2b.png",
     "static/media/no-speak.png": "/Messaging-App/static/media/no-speak.8e04e283b39a90aa87d9.png",
     "static/media/link.png": "/Messaging-App/static/media/link.693b3f4dc18a31d4c88c.png",
     "static/media/face.png": "/Messaging-App/static/media/face.3633ca9b219601a67ea5.png",
-    "static/media/mixkit-gaming-lock-2848 (online-audio-converter.com).mp3": "/Messaging-App/static/media/mixkit-gaming-lock-2848 (online-audio-converter.com).a0174caa52cb398b79be.mp3",
     "static/media/send-message.png": "/Messaging-App/static/media/send-message.cce7f972efaf9447fcdf.png",
     "static/media/info.png": "/Messaging-App/static/media/info.0df83b68d7fad4332ca1.png",
     "static/media/delete.png": "/Messaging-App/static/media/delete.b5d68e25ab3f6cd47475.png",
     "index.html": "/Messaging-App/index.html",
-    "main.b57ef755.css.map": "/Messaging-App/static/css/main.b57ef755.css.map",
-    "main.a38a0311.js.map": "/Messaging-App/static/js/main.a38a0311.js.map"
+    "main.23488570.css.map": "/Messaging-App/static/css/main.23488570.css.map",
+    "main.3556a905.js.map": "/Messaging-App/static/js/main.3556a905.js.map"
   },
   "entrypoints": [
-    "static/css/main.b57ef755.css",
-    "static/js/main.a38a0311.js"
+    "static/css/main.23488570.css",
+    "static/js/main.3556a905.js"
   ]
 }
