@@ -4,19 +4,16 @@
         height:94.5vh !important;
     }
     nav{
-        min-width:800px !important;
-        max-width:950px !important;
-        height:5% !important;
+        max-width:900px !important;
+        height:6% !important;
     }
     .messageContainer{
-        min-width:800px !important;
-        max-width:950px !important;
-        height:40% !important;
+        max-width:900px !important;
+        height:60% !important;
     }
     .chatAndTools{
-        min-width:800px !important;
-        max-width:950px !important;
-        height:5% !important;
+        max-width:900px !important;
+        height:6% !important;
     } 
     .dhButton{
         height:30px !important;
@@ -33,8 +30,7 @@
         height:1.6vw !important;
     }
     .containerBottom{
-        min-width:900px !important;
-        max-width:1050px !important;
+        max-width:900px !important;
     }
 }
 @media all and (max-width:960px){
@@ -44,11 +40,11 @@
     }
     nav{
         width:90% !important;
-        height:5% !important;
+        height:6% !important;
     }
     .messageContainer{
         width:90% !important;
-        height:50% !important;
+        height:60% !important;
     }
     .chatAndTools{
         width:90% !important;
@@ -156,7 +152,7 @@ nav{
     align-items:center;
     width:75%;
     max-width:800px;
-    max-height:1500px;
+    height:6%;
     margin-top:3%;
     background-color: rgb(16, 36, 61);
     border-top-style: solid;
@@ -164,12 +160,10 @@ nav{
     border-right-style: solid;
     border-left-width:12px;
     border-right-width:12px;
-    border-top-width:40px;
+    border-top-width:12px;
     border-left-color:rgb(2, 2, 2);
     border-right-color:rgb(2, 2, 2);
     border-top-color:rgb(2, 2, 2);
-    border-top-left-radius:20px;
-    border-top-right-radius:20px;
     color:white;
     font-size:1.5rem;
     z-index:1;
@@ -189,7 +183,7 @@ nav{
     align-items:center;
     width:75%;
     max-width:800px;
-    height:45%;
+    height:60%;
     max-height:400px;
     background-color: rgb(16, 36, 61);
     border-left-style: solid;
@@ -395,6 +389,7 @@ nav{
 }
 .chatAndTools{
     width:75%;
+    height:6%;
     max-width:800px;
     display:flex;
     justify-content:center;
@@ -405,7 +400,7 @@ nav{
     border-right-style: solid;
     border-left-width:12px;
     border-right-width:12px;
-    border-bottom-width:45px;
+    border-bottom-width:12px;
     border-left-color:rgb(2, 2, 2);
     border-right-color:rgb(2, 2, 2);
     border-bottom-color:rgb(2, 2, 2);
@@ -589,51 +584,7 @@ nav{
     height:80%;
     border-radius:20px;
 }
-.containerBottom{
-    display:flex;
-    flex-direction: column;
-    width:85%;
-    max-width:900px;
-    height:5%;
-}
-.cbMain{
-    display:flex;
-    background-color: #cfcfcf;
-    flex:auto;
-    height:75%;
-    border-bottom-left-radius:12px;
-    border-bottom-right-radius:12px;
-    box-shadow: inset 0px -4px 6px 2px rgba(0,0,0,0.50);
-}
-.cbMiddle{
-    background-color: #cfcfcf;
-    height:55%;
-    width:15%;
-    border-bottom-left-radius:18px;
-    border-bottom-right-radius:18px;
-    margin-left:auto;
-    margin-right:auto;
-    box-shadow: inset 0px -4px 6px -3px rgba(0,0,0,0.50);
-}
-.cbBottom{
-    display:flex;
-    height:20%;
-}
-.peg1{
-    width:5%;
-    background-color: #020202;
-    margin-right:auto;
-    margin-left:3%;
-    border-bottom-left-radius:14px;
-    border-bottom-right-radius:14px;
-}
-.peg2{
-    width:5%;
-    background-color: #020202;
-    margin-right:3%;
-    border-bottom-left-radius:14px;
-    border-bottom-right-radius:14px;
-}
+
 .generatedMessageBox::-webkit-scrollbar{
     background-color: rgb(35, 61, 92);
     width:10px;

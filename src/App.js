@@ -165,16 +165,6 @@ class App extends Component {
               </form>
             </div>
           </div>
-          <div className='containerBottom'>
-            <div className='cbMain'>
-              <div className='cbMiddle'>
-              </div>
-            </div>
-            <div className='cbBottom'>
-                <div className='peg1'> </div>
-                <div className='peg2'> </div>
-            </div>
-          </div>
         </div>
       </div> 
     );  
