@@ -104,10 +104,17 @@ export const ImgCredits = (props) => {
                     <img className="linkImg" src={require("./Images/link.png")}></img>
                 </a>
             </div>
+            <div className="photoCreds" id="pc7">
+                <img className="pcImg" src={require("./Images/link.png")}></img>
+                By Noplubery
+                <a className="ancHold" href="https://www.flaticon.com/free-icon/link_7471685?term=link&page=1&position=51&page=1&position=51&related_id=7471685&origin=search">
+                    <img className="linkImg" src={require("./Images/link.png")}></img>
+                </a>
+            </div>
         </div>
     </div>
     }
-    //Temporary solution for animation fadeOut; won't want to keep this permanently as it may take up too many resources.
+    //Code below meant to help simulate fade-out animation upon every other click
     else if (trigger === false){
         return <div className="imgCredits2">
         <div className="icContentBox">
@@ -150,6 +157,13 @@ export const ImgCredits = (props) => {
                 <img className="pcImg" src={require("./Images/1735.jpg")}></img>
                 By vectorpouch
                 <a className="ancHold" href="https://www.freepik.com/free-vector/living-room-interior-with-panoramic-window-night-time_5467441.htm#query=living%20room%20interior%20with%20panoramic%20window&position=17&from_view=search&track=sph">
+                    <img className="linkImg" src={require("./Images/link.png")}></img>
+                </a>
+            </div>
+            <div className="photoCreds">
+                <img className="pcImg" src={require("./Images/link.png")}></img>
+                By Noplubery
+                <a className="ancHold" href="https://www.flaticon.com/free-icon/link_7471685?term=link&page=1&position=51&page=1&position=51&related_id=7471685&origin=search">
                     <img className="linkImg" src={require("./Images/link.png")}></img>
                 </a>
             </div>

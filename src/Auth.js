@@ -61,11 +61,4 @@ export const AdminClear = () => {
             </div>
         )
     }
-    else {
-        return(
-            <div className="hiddenDelete">
-                <img className="adminDeleteIcon" src={require("./Images/info.png")} alt='Info'></img>
-            </div>
-        )
-    }
 };
